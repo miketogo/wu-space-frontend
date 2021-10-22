@@ -1,0 +1,24 @@
+.main-video {}
+
+.main-video__prev-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main-video__container{
+    display: flex;
+    position: relative;
+    height: 1040px;
+}
+.main-video__gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: linear-gradient(180deg, #30302F 0%, rgba(151, 151, 149, 0) 41.98%, rgba(151, 151, 149, 0) 58.85%, #979795 100%);
+}
