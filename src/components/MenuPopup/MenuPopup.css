@@ -1,0 +1,116 @@
+.menu-popup__container{
+    font-family: Inter, Arial, sans-serif;
+    width: calc(100vw - 300px);
+    height: 130vh;
+    background: #979795;
+    z-index: 1001;
+    position: absolute;
+    top: 0;
+    /* padding-bottom: 70px;
+      transform: translateY(70px); */
+  
+    right: calc((100vw - 300px) * -1);
+    transition:  transform 0.2s linear;
+  }
+  
+  .menu-popup__container_active{
+    transform: translateX(calc((100vw - 300px) * -1));
+  }
+  
+  .menu-popup__background{
+   width: 100%;
+   height: 130vh;
+   background: #000000;
+   opacity: 0;
+   z-index: 999;
+   transition: opacity 0.4s linear;
+  }
+  
+  .menu-popup__background_active{
+    opacity: 0.3;
+    transition: opacity 0.4s linear;
+   }
+  
+  
+  .menu-popup{
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 130vh;
+    visibility: hidden;
+    transition: visibility 1s, opacity 1s linear;
+  }
+  
+  .menu-popup_active{
+    visibility: visible;
+  }
+  
+  
+  .menu-popup__close {
+    position: absolute;
+    top: 20px;
+    right: 26px;
+    width: fit-content;
+    height: fit-content;
+    }
+  
+  .menu-popup__link{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin: 44px 0 0;
+    color: #FFFFFF;
+    text-decoration: none;
+    
+  }
+  
+  .menu-popup__link:first-of-type{
+    margin-top: 0;
+  }
+  
+  .menu-popup__link-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .menu-popup__link_active{
+    border-bottom: 2px #fff solid;
+    padding-bottom: 4px;
+  }
+  
+ 
+  
+    @media (max-width: 802px){
+      .menu-popup__container{
+        width: 100vw;
+        right: calc(100vw * -1);
+      }
+  
+      .menu-popup__container_active{
+        transform: translateX(calc(100vw * -1));
+      }
+      .menu-popup__close {
+        top: 20px;
+        right: 26px;
+        width: fit-content;
+        height: fit-content;
+    }
+        .menu-popup__link-container{
+          margin-top: 144px;
+        }
+        .menu-popup__link_active{
+          padding-bottom: 7px;
+        }
+        .menu-popup__profile-button-container{
+          margin-top: 44px;
+        }
+  
+    }
+  

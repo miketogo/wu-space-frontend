@@ -1,0 +1,347 @@
+.membership {
+  padding: 200px 40px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.membership__title {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 54px;
+  text-align: left;
+  width: 100%;
+  /* identical to box height */
+  text-transform: uppercase;
+  /* text white */
+  color: #F1EBE5;
+  margin: 0;
+}
+
+.membership__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 44px 0 0;
+}
+
+.membership__card {
+  display: flex;
+  flex-direction: column;
+  margin: 0 55px 0 0;
+}
+
+.membership__card:last-of-type {
+  margin: 0;
+}
+
+.membership__card-title {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 40px;
+  /* secondary/100 */
+  color: #FCEFDA;
+  margin: 0;
+}
+
+.membership__card-subscription {
+  width: 445px;
+  height: 272px;
+  border-radius: 28px;
+  position: relative;
+  margin: 24px 0 0;
+  cursor: pointer;
+}
+
+.membership__card-subscription_offline {
+  background: conic-gradient(from 117.57deg at 50% 50%, #FFAF65 -28.34deg, #FF8D23 1.42deg, #FFAF65 35.18deg, #FF8D23 77.47deg, #FFAF65 128.16deg, #FF8D23 149.95deg, #FFAF65 184.63deg, #FF8D23 214.02deg, #FFAF65 265.08deg, #FF8D23 296.68deg, #FFAF65 331.66deg, #FF8D23 361.42deg);
+}
+
+.membership__card-subscription_online {
+  background: conic-gradient(from 117.57deg at 50% 50%, #E1E1E1 -28.34deg, #FFFFFF 1.42deg, #E1E1E1 35.18deg, #FFFFFF 77.47deg, #E1E1E1 114.38deg, #FFFFFF 149.95deg, #E1E1E1 184.63deg, #FFFFFF 214.02deg, #E1E1E1 265.08deg, #FFFFFF 296.68deg, #E1E1E1 331.66deg, #FFFFFF 361.42deg);
+}
+
+.membership__card-subscription_vip {
+  background: conic-gradient(from -7.74deg at 50% 50%, #2C2C2C -28.34deg, #121212 1.42deg, #2C2C2C 35.18deg, #1E1E1E 82deg, #323232 128.16deg, #121212 149.95deg, #292929 184.63deg, #000000 214.02deg, #232323 265.08deg, #222121 296.68deg, #2C2C2C 331.66deg, #121212 361.42deg);
+}
+
+.membership__card-subscription-logo {
+  position: absolute;
+  top: 19px;
+  left: 21px;
+}
+
+.membership__card-text-container {
+  background: #C57642;
+  margin: -82px 0 0 49px;
+  padding: 104px 20px 20px 12px;
+  display: flex;
+  flex-direction: column;
+  width: 416px;
+}
+
+.membership__card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.membership__card-advantages {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  margin: 0;
+  color: #FFFFFF;
+}
+
+.membership__card-price {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 130%;
+  margin: 0;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.membership__card-ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+}
+
+.membership__card-li {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  color: #FFFFFF;
+}
+
+.membership__card-buy-button {
+  display: flex;
+  flex-direction: column;
+  margin: 61px 0 0;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.membership__card-buy-button-text {
+  max-width: 280px;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  margin: 0;
+  color: #FDFDFD;
+}
+
+.membership__card-buy-button-arrow {
+  margin: 12px 0 0;
+}
+
+@media (max-width: 1688px) {
+  .membership__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .membership__card-title {
+    font-size: 24px;
+    line-height: 27px;
+  }
+  .membership__card-subscription {
+    width: 392px;
+    height: 240px;
+  }
+  .membership__card-subscription-logo {
+    top: 17px;
+    left: 19px;
+  }
+  .membership__card-advantages {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .membership__card-price {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .membership__card-text-container {
+    margin: -84px 0 0 65px;
+    padding: 104px 12px 20px 12px;
+    width: 351px;
+  }
+  .membership__card {
+    margin: 0 20px 0 0;
+  }
+  .membership__card-buy-button {
+    margin: 59px 0 0;
+  }
+}
+
+@media (max-width: 1448px) {
+  .membership__card-subscription {
+    width: 324px;
+    height: 199px;
+  }
+  .membership__card-subscription-logo {
+    top: 20px;
+    left: 20px;
+  }
+  .membership__card-advantages {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .membership__card-price {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .membership__card-text-container {
+    margin: -92px 0 0 28px;
+    padding: 104px 26px 20px 12px;
+    width: 312px;
+  }
+  .membership__card {
+    margin: 0 20px 0 0;
+  }
+  .membership__card-li {
+    font-size: 12px;
+    line-height: 140%;
+  }
+  .membership__card-buy-button {
+    margin: 44px 0 0;
+  }
+}
+
+@media (max-width: 1256px) {
+  .membership__cards {
+    display: flex;
+    flex-direction: column;
+  }
+  .membership__card {
+    display: flex;
+    flex-direction: column;
+    margin: 44px 0 0 0;
+  }
+  .membership__card:last-of-type {
+    margin: 44px 0 0 0;
+  }
+  .membership__card:first-of-type {
+
+    margin:0;
+  }
+  .membership__title {
+    font-size: 48px;
+    line-height: 54px;
+    margin-top: 0;
+  }
+  .membership__card-subscription {
+    width: 516px;
+    height: 315px;
+  }
+  .membership__card-subscription-logo {
+    top: 25px;
+    left: 25px;
+  }
+  .membership__card-advantages {
+    font-size: 24px;
+    line-height: 27px;
+  }
+  .membership__card-price {
+    font-size: 24px;
+    line-height: 130%;
+  }
+  .membership__card-text-container {
+    margin: -78px 0 0 221px;
+    padding: 102px 20px 20px 12px;
+    width: 416px;
+  }
+  .membership__card-li {
+    font-size: 16px;
+    line-height: 140%;
+  }
+  .membership__card-buy-button {
+    margin: 61px 0 0;
+  }
+}
+
+@media (max-width: 1137px) {
+  .membership {
+    padding: 200px 20px 0;
+  }
+}
+@media (max-width: 880px){
+
+  .membership__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .membership__card-subscription {
+    width: 445px;
+    height: 272px;
+  }
+  .membership__card {
+    margin: 72px 0 0 0;
+  }
+  .membership__card:last-of-type {
+    margin: 72px 0 0 0;
+  }
+  .membership__card-text-container {
+    margin: -82px 0 0 49px;
+    padding: 106px 20px 20px 12px;
+    width: 416px;
+  }
+  .membership__card-buy-button {
+    margin: 59px 0 0;
+  }
+  .membership__card-subscription-logo {
+    top: 17px;
+    left: 21px;
+  }
+}
+@media (max-width: 588px){
+  .membership {
+    padding: 200px 8px 0;
+  }
+  .membership__title {
+    font-size: 24px;
+    line-height: 27px;
+  }
+  .membership__card-title {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .membership__card-subscription-logo {
+    top: 14px;
+    left: 14px;
+  }
+  .membership__card-subscription {
+    width: 284px;
+    height: 172px;
+  }
+  .membership__card-advantages {
+    font-size: 12px;
+    line-height: 13px;
+  }
+  .membership__card-price {
+    font-size: 16px;
+    line-height: 130%;
+  }
+  .membership__card-text-container {
+    margin: -20px 0 0 20px;
+    padding: 32px 12px 20px 12px;
+    width: 254px;
+  }
+  .membership__card-buy-button-arrow{
+    width: 100%;
+  }
+}

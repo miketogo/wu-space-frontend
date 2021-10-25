@@ -1,4 +1,9 @@
-.app {}
+.app {
+    max-width: 1920px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 0 300px 0 ;
+}
 
 .app__bg {
     position: fixed;
@@ -7,5 +12,6 @@
     z-index: -1;
     width: 100vw;
     height: 100vh;
+    overflow: visible;
     background: linear-gradient(173.54deg, #BEBEBC 3.89%, #4E4E4E 93.71%, #4E4E4E 93.71%);
 }
