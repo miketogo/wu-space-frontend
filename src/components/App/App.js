@@ -6,6 +6,7 @@ import './App.css'
 import Main from '../Main/Main';
 import Header from '../Header/Header';
 import MenuPopup from '../MenuPopup/MenuPopup';
+import Footer from '../Footer/Footer';
 
 function App() {
   const [isMenuPopupOpen, setMenuPopupOpen] = React.useState(false);
@@ -39,6 +40,7 @@ React.useEffect(() => {
             <Main screenWidth={screenWidth}/>
           </Route>
         </Switch>
+        <Footer screenWidth={screenWidth}/>
       </div>
       <div className='app__bg'>
 
