@@ -95,6 +95,19 @@
   object-fit: cover;
 }
 
+.loading {
+  height: 100%;
+  width: 100%;
+  z-index: 4;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #eee;
+  background: linear-gradient(90deg, #969694 8%, #9b9b99 18%, #969694 33%);
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+
 .anim-fadein {
   animation: fadein 0.5s;
   animation-iteration-count: 1;
@@ -103,6 +116,14 @@
 .anim-fadeout {
   animation: fadeout 0.5s;
   animation-iteration-count: 1;
+}
+.hidden-images{
+  display: none;
+}
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
 }
 
 @keyframes fadein {
@@ -192,9 +213,9 @@
     display: none;
   }
 }
+
 @media (max-width: 700px) {
   .about-space__text-container {
-
     padding: 24px 11px 78px;
   }
   .about-space__second-text {
@@ -202,7 +223,8 @@
     line-height: 20px;
   }
 }
-@media (max-width: 588px){
+
+@media (max-width: 588px) {
   .about-space__image-fade {
     height: 260px;
   }
@@ -211,10 +233,9 @@
   }
   .about-space__text-container {
     flex-direction: column;
-
     padding: 28px 15px 40px 12px;
   }
-  .about-space__first-text{
+  .about-space__first-text {
     margin: 0;
   }
   .about-space__second-text {
@@ -227,7 +248,6 @@
   .about-space__prevs {
     padding: 0 8px 0 0;
     margin: 20px -8px 0 0;
-
   }
   .about-space__prev-image {
     margin: 0 0 0 6px;
