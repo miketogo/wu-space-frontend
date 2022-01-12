@@ -19,13 +19,13 @@ function MenuPopup(props) {
           <NavLink exact to="/" className="menu-popup__link" activeClassName="menu-popup__link_active" onClick={props.handleMenuCloseClick}>
             Главная
           </NavLink>
-          <NavLink exact to="/services" className="menu-popup__link" activeClassName="menu-popup__link_active" onClick={props.handleMenuCloseClick}>
+          <NavLink to="/" className="menu-popup__link menu-popup__link_disabled"  onClick={props.handleMenuCloseClick}>
             Услуги
           </NavLink>
           <NavLink to="/contacts" className="menu-popup__link" activeClassName="menu-popup__link_active" onClick={props.handleMenuCloseClick}>
             контакты
           </NavLink>
-          <NavLink to="/account" className="menu-popup__link" activeClassName="menu-popup__link_active" onClick={props.handleMenuCloseClick}>
+          <NavLink to="/" className="menu-popup__link menu-popup__link_disabled"   onClick={props.handleMenuCloseClick}>
             Личный кабинет
           </NavLink>
         </nav>

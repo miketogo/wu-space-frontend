@@ -14,8 +14,8 @@ function Contacts(props) {
 
       <YMaps>
         <div className="contacts__map-container">
-          <Map className="contacts__map" defaultState={{ center: [55.764415, 37.593075], zoom: 17 }}>
-            <Placemark geometry={[55.764415, 37.593075]}
+          <Map className="contacts__map" defaultState={{ center: [55.763233, 37.593177], zoom: 17 }}>
+            <Placemark geometry={[55.763233, 37.593177]}
               options={{
                 iconLayout: 'default#image',
                 iconImageHref: geomark, //установили в качестве метки свою картинку
@@ -79,7 +79,7 @@ function Contacts(props) {
 
                 <p className="contacts__time-table-text">пн - пт / 09:00 - 21:00<br />сб - вс / 11:00 - 22:00</p>
               </div>
-              <a target="_blank" rel="noreferrer" href={`https://yandex.ru/maps/?pt=37.593075,55.764415&z=18&l=map`} className="contacts__link" >
+              <a target="_blank" rel="noreferrer" href={`https://yandex.ru/maps/?pt=37.593177,55.763233&z=18&l=map`} className="contacts__link" >
                 <svg className="contacts__link-icon" width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clipPath="url(#clip0_351:2905)">
                     <path className="contacts__link-icon-path" d="M16.0001 0.5C9.87595 0.5 4.91797 5.65847 4.91797 11.9926C4.91797 14.2759 5.58429 16.0118 6.67518 17.7774L15.6538 32.3098C15.6908 32.3681 15.742 32.4161 15.8025 32.4493C15.8631 32.4826 15.931 32.5 16.0001 32.5C16.0692 32.5 16.1371 32.4826 16.1976 32.4493C16.2582 32.4161 16.3094 32.3681 16.3464 32.3098L25.325 17.7774C26.4159 16.0118 27.0822 14.2759 27.0822 11.9926C27.0822 5.65847 22.1242 0.5 16.0001 0.5ZM16.0001 1.3209C21.6636 1.3209 26.2613 6.08566 26.2613 11.9926C26.2613 14.121 25.676 15.6651 24.6323 17.3541L16.0001 31.3222L7.36786 17.3541C6.32417 15.6651 5.73887 14.1209 5.73887 11.9926C5.73887 6.08566 10.3366 1.3209 16.0001 1.3209ZM16.0001 6.24629C13.0581 6.24629 10.6643 8.64011 10.6643 11.5821C10.6643 14.5241 13.058 16.918 16.0001 16.918C18.9422 16.918 21.3359 14.5241 21.3359 11.5821C21.3359 8.64011 18.9421 6.24629 16.0001 6.24629ZM16.0001 7.06719C18.4985 7.06719 20.515 9.08372 20.515 11.5821C20.515 14.0805 18.4985 16.0971 16.0001 16.0971C13.5017 16.0971 11.4852 14.0805 11.4852 11.5821C11.4852 9.08372 13.5017 7.06719 16.0001 7.06719Z" fill="white" />
@@ -93,7 +93,7 @@ function Contacts(props) {
 
 
 
-                <p className="contacts__link-text">Малая бронная, 34</p>
+                <p className="contacts__link-text">Большой Патриарший пер. 10</p>
               </a>
             </div>
             :

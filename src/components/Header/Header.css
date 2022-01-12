@@ -53,6 +53,13 @@
 .header__nav-link:hover {
   opacity: 0.8;
 }
+.header__nav-link_disabled{
+  opacity: 0.4;
+}
+.header__nav-link_disabled:hover{
+  cursor: no-drop;
+  opacity: 0.4;
+}
 
 .header__burger {
   display: none;

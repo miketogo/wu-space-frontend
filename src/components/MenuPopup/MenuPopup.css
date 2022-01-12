@@ -84,7 +84,9 @@
     border-bottom: 2px #fff solid;
     padding-bottom: 4px;
   }
-  
+  .menu-popup__link_disabled{
+    opacity: 0.4;
+  }
  
   
     @media (max-width: 802px){
