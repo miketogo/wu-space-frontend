@@ -21,269 +21,227 @@
 }
 
 .membership__cards {
+  margin: 80px 0 0;
   display: flex;
+  width: 100%;
   flex-direction: row;
-  flex-wrap: wrap;
-  margin: 44px 0 0;
+  justify-content: space-between;
+}
+
+.membership__cards_second_row {
+  margin: 65px 0 0;
+}
+
+.membership__card_hidden {
+  opacity: 0;
 }
 
 .membership__card {
+  background: #81816C;
   display: flex;
   flex-direction: column;
-  margin: 0 55px 0 0;
+  padding: 25px 20px 20px 20px;
+  max-width: 510px;
+  min-height: 772px;
+  width: calc(100% / 3 - 20px * 2);
+  margin: 0 40px 0 0;
+}
+
+.membership__card_more {
+  min-height: 927px;
 }
 
 .membership__card:last-of-type {
   margin: 0;
 }
 
-.membership__card-title {
-  font-family: Comfortaa;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 36px;
-  line-height: 40px;
-  /* secondary/100 */
-  color: #FCEFDA;
-  margin: 0;
-}
-
-.membership__card-subscription {
-  width: 445px;
-  height: 272px;
-  border-radius: 28px;
-  position: relative;
-  margin: 24px 0 0;
-  cursor: pointer;
-}
-
-.membership__card-subscription_offline {
-  background: conic-gradient(from 117.57deg at 50% 50%, #FFAF65 -28.34deg, #FF8D23 1.42deg, #FFAF65 35.18deg, #FF8D23 77.47deg, #FFAF65 128.16deg, #FF8D23 149.95deg, #FFAF65 184.63deg, #FF8D23 214.02deg, #FFAF65 265.08deg, #FF8D23 296.68deg, #FFAF65 331.66deg, #FF8D23 361.42deg);
-}
-
-.membership__card-subscription_online {
-  background: conic-gradient(from 117.57deg at 50% 50%, #E1E1E1 -28.34deg, #FFFFFF 1.42deg, #E1E1E1 35.18deg, #FFFFFF 77.47deg, #E1E1E1 114.38deg, #FFFFFF 149.95deg, #E1E1E1 184.63deg, #FFFFFF 214.02deg, #E1E1E1 265.08deg, #FFFFFF 296.68deg, #E1E1E1 331.66deg, #FFFFFF 361.42deg);
-}
-
-.membership__card-subscription_vip {
-  background: conic-gradient(from -7.74deg at 50% 50%, #2C2C2C -28.34deg, #121212 1.42deg, #2C2C2C 35.18deg, #1E1E1E 82deg, #323232 128.16deg, #121212 149.95deg, #292929 184.63deg, #000000 214.02deg, #232323 265.08deg, #222121 296.68deg, #2C2C2C 331.66deg, #121212 361.42deg);
-}
-
-.membership__card-subscription-logo {
-  position: absolute;
-  top: 19px;
-  left: 21px;
-}
-
-.membership__card-text-container {
-  background: #C57642;
-  margin: -82px 0 0 49px;
-  padding: 104px 20px 20px 12px;
-  display: flex;
-  flex-direction: column;
-  width: 416px;
-  min-height: 180px;
-}
-
-.membership__card-header {
+.membership__card-head {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.membership__card-advantages {
+.membership__card-name {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
-  line-height: 27px;
-  margin: 0;
+  font-size: 28px;
+  line-height: 31px;
+
   color: #FFFFFF;
+  margin: 0;
 }
 
 .membership__card-price {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 130%;
+  font-size: 28px;
+  line-height: 31px;
+
+  /* main/200 */
+
+  color: #F4F4F3;
   margin: 0;
-  text-align: right;
-  color: #FFFFFF;
 }
 
-.membership__card-ul {
-  display: flex;
-  flex-direction: column;
-  padding-left: 25px;
+.membership__card-ticket {
+  width: 100%;
+  height: 311px;
+  border-radius: 28px;
+  margin: 25px 0 0;
+  position: relative;
 }
 
-.membership__card-li {
+.membership__card-ticket-logo {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+}
+
+.membership__card-ticket_var_basis {
+  background: conic-gradient(from 175.59deg at 50% 50%, #CF7E54 -19.99deg, #EFB696 3.65deg, #EAAB86 20.3deg, #E39E77 44.77deg, #D47E4F 64.08deg, #EDAF8E 107.38deg, #FCD5C0 133.59deg, #EBB18E 184.63deg, #CE8158 232.67deg, #E4AB8A 265.08deg, #FCD7C5 291.8deg, #E5AB8B 322.63deg, #CF7E54 340.01deg, #EFB696 363.65deg);
+}
+
+.membership__card-ticket_var_masters {
+  background: conic-gradient(from -7.74deg at 50% 50%, #986747 -28.34deg, #744627 1.42deg, #986747 35.18deg, #744627 82deg, #986747 128.16deg, #744627 149.95deg, #986747 184.63deg, #744627 214.02deg, #986747 265.08deg, #744627 296.68deg, #986747 331.66deg, #744627 361.42deg);
+}
+
+.membership__card-ticket_var_star {
+  background: conic-gradient(from 117.57deg at 50% 50%, #FFAF65 -28.34deg, #FF8D23 1.42deg, #FFAF65 35.18deg, #FF8D23 77.47deg, #FFAF65 128.16deg, #FF8D23 149.95deg, #FFAF65 184.63deg, #FF8D23 214.02deg, #FFAF65 265.08deg, #FF8D23 296.68deg, #FFAF65 331.66deg, #FF8D23 361.42deg);
+}
+
+.membership__card-ticket_var_unique {
+  background: conic-gradient(from 117.57deg at 50% 50%, #E1E1E1 -28.34deg, #FFFFFF 1.42deg, #E1E1E1 35.18deg, #FFFFFF 77.47deg, #E1E1E1 114.38deg, #FFFFFF 149.95deg, #E1E1E1 184.63deg, #FFFFFF 214.02deg, #E1E1E1 265.08deg, #FFFFFF 296.68deg, #E1E1E1 331.66deg, #FFFFFF 361.42deg);
+}
+
+.membership__card-ticket_var_premium {
+  background: conic-gradient(from -7.74deg at 50% 50%, #2C2C2C -28.34deg, #121212 1.42deg, #2C2C2C 35.18deg, #1E1E1E 82deg, #323232 128.16deg, #121212 149.95deg, #292929 184.63deg, #000000 214.02deg, #232323 265.08deg, #222121 296.68deg, #2C2C2C 331.66deg, #121212 361.42deg);
+}
+
+.membership__card-visit-times {
+  margin: 20px 0 0;
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 140%;
-  /* or 22px */
+  line-height: 18px;
+  /* identical to box height */
+
+
   color: #FFFFFF;
+
+  opacity: 0.9;
 }
 
-.membership__card-buy-button {
-  display: flex;
-  flex-direction: column;
-  margin: auto 0 0;
-  align-self: flex-end;
-  cursor: pointer;
-}
-
-.membership__card-buy-button-text {
-  max-width: 280px;
+.membership__card-validity-period {
+  margin: 8px 0 0;
   font-family: Comfortaa;
   font-style: normal;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 16px;
   line-height: 18px;
-  margin: 0;
-  color: #FDFDFD;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+
+  opacity: 0.9;
 }
 
-.membership__card-buy-button-arrow {
-  margin: 12px 0 0;
-}
-
-.membership__card-advantages-title {
+.membership__card-distributed {
+  margin: 38px 0 0;
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 140%;
   /* identical to box height, or 20px */
+
+
   color: #FFFFFF;
-  opacity: 0.76;
+
+  opacity: 0.8;
+}
+
+.membership__card-practics {
+  margin: 10px 0 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+  max-width: calc(100% - 40px);
+
+  color: #FFFFFF;
+
+}
+
+.membership__card-bonus {
+  margin: 20px 0 0;
+  max-width: calc(100% - 40px);
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+  /* or 22px */
+
+
+  color: #FFFFFF;
+
+}
+
+.membership__card-btn {
+  margin: auto 0 0;
+  background: #FFFFFF;
+  border: 1px solid #FFFFFF;
+  cursor: pointer;
+  width: 100%;
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.membership__card-btn:hover {
+  opacity: 0.7;
+}
+
+.membership__card-btn-text {
   margin: 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 22px;
+
+  /* main/900 */
+
+  color: #48481C;
+
+
 }
 
-@media (max-width: 1688px) {
-  .membership__title {
-    font-size: 36px;
-    line-height: 40px;
-  }
-  .membership__card-title {
-    font-size: 24px;
-    line-height: 27px;
-  }
-  .membership__card-subscription {
-    width: 392px;
-    height: 240px;
-  }
-  .membership__card-subscription-logo {
-    top: 17px;
-    left: 19px;
-  }
-  .membership__card-advantages {
-    font-size: 20px;
-    line-height: 22px;
-  }
-  .membership__card-price {
-    font-size: 20px;
-    line-height: 130%;
-  }
-  .membership__card-text-container {
-    margin: -84px 0 0 65px;
-    padding: 104px 12px 20px 12px;
-    width: 351px;
-  }
-  .membership__card {
-    margin: 0 20px 0 0;
-  }
-  .membership__card-buy-button {
-    margin: auto 0 0;
-  }
+.membership__card-btn-plug {
+  margin: 35px 0 0;
 }
 
-@media (max-width: 1448px) {
-  .membership__card-subscription {
-    width: 324px;
-    height: 199px;
-  }
-  .membership__card-subscription-logo {
-    top: 20px;
-    left: 20px;
-  }
-  .membership__card-advantages {
-    font-size: 16px;
-    line-height: 18px;
-  }
-  .membership__card-price {
-    font-size: 16px;
-    line-height: 130%;
-  }
-  .membership__card-text-container {
-    margin: -92px 0 0 28px;
-    padding: 104px 26px 20px 12px;
-    width: 312px;
-  }
-  .membership__card {
-    margin: 0 20px 0 0;
-  }
-  .membership__card-li {
-    font-size: 12px;
-    line-height: 140%;
-  }
-  .membership__card-buy-button {
-    margin: auto 0 0;
-  }
-}
+.membership__card-more {
+  margin: 20px 0 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  /* identical to box height, or 16px */
 
-@media (max-width: 1256px) {
-  .membership__cards {
-    display: flex;
-    flex-direction: column;
-  }
-  .membership__card {
-    display: flex;
-    flex-direction: column;
-    margin: 44px 0 0 0;
-  }
-  .membership__card:last-of-type {
-    margin: 44px 0 0 0;
-  }
-  .membership__card:first-of-type {
-    margin: 0;
-  }
-  .membership__title {
-    font-size: 48px;
-    line-height: 54px;
-    margin-top: 0;
-  }
-  .membership__card-subscription {
-    width: 516px;
-    height: 315px;
-  }
-  .membership__card-subscription-logo {
-    top: 25px;
-    left: 25px;
-  }
-  .membership__card-advantages {
-    font-size: 24px;
-    line-height: 27px;
-  }
-  .membership__card-price {
-    font-size: 24px;
-    line-height: 130%;
-  }
-  .membership__card-text-container {
-    margin: -78px 0 0 221px;
-    padding: 102px 20px 20px 12px;
-    width: 416px;
-  }
-  .membership__card-li {
-    font-size: 16px;
-    line-height: 140%;
-  }
-  .membership__card-buy-button {
-    margin: auto 0 0;
-  }
+  text-decoration-line: underline;
+
+  color: #FFFFFF;
+  cursor: pointer;
 }
 
 @media (max-width: 1137px) {
@@ -292,69 +250,353 @@
   }
 }
 
-@media (max-width: 880px) {
-  .membership__title {
-    font-size: 36px;
-    line-height: 40px;
-  }
-  .membership__card-subscription {
-    width: 445px;
-    height: 272px;
-  }
-  .membership__card {
-    margin: 72px 0 0 0;
-  }
-  .membership__card:last-of-type {
-    margin: 72px 0 0 0;
-  }
-  .membership__card-text-container {
-    margin: -82px 0 0 49px;
-    padding: 106px 20px 20px 12px;
-    width: 416px;
-  }
-  .membership__card-buy-button {
-    margin: auto 0 0;
-  }
-  .membership__card-subscription-logo {
-    top: 17px;
-    left: 21px;
-  }
-}
+
 
 @media (max-width: 588px) {
   .membership {
     padding: 200px 8px 0;
   }
+
+}
+
+
+@media (max-width: 1453px) {
+  .membership__card-ticket {
+    margin: 12px 0 0;
+    height: 210px;
+  }
+
+  .membership__card-ticket-logo {
+    width: 43.96px;
+    height: 35.28px;
+    top: 15px;
+    left: 16px;
+  }
+
+  .membership__card {
+    max-width: 387px;
+    width: 100%;
+    padding: 17px 14px 12px 14px;
+    min-height: 642px;
+    margin: 0 20px 0 0;
+  }
+
+  .membership__card-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18.8764px;
+    line-height: 21px;
+  }
+
+  .membership__card-price {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18.8764px;
+    line-height: 21px;
+  }
+
+  .membership__card-visit-times {
+    margin: 16px 0 0;
+  }
+
+  .membership__card-validity-period {
+    margin: 4px 0 0;
+  }
+
+  .membership__card-distributed {
+    margin: 24px 0 0;
+  }
+
+  .membership__card-practics {
+    margin: 8px 0 0;
+  }
+
+  .membership__card-btn {
+    padding: 11px 0;
+  }
+
+  .membership__card-btn-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13.4831px;
+    line-height: 15px;
+  }
+
   .membership__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .membership__cards {
+    margin: 36px 0 0;
+  }
+
+  .membership__cards_second_row {
+    margin: 20px 0 0;
+  }
+}
+
+
+@media (max-width: 1012px) {
+  .membership__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .membership__cards {
+    margin: 40px 0 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .membership__cards_second_row {
+    margin: 20px 0 0;
+  }
+
+  .membership__card {
+    padding: 25px 12px 12px 12px;
+    max-width: calc(100% - 12px - 12px);
+    margin: 20px 0 0;
+    height: fit-content;
+    min-height: unset;
+  }
+
+  .membership__card:first-of-type {
+    margin: 0;
+  }
+
+  .membership__card:last-of-type {
+    margin: 20px 0 0;
+  }
+
+  .membership__card-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27.3147px;
+    line-height: 30px;
+  }
+
+
+  .membership__card-price {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27.3147px;
+    line-height: 30px;
+  }
+
+
+  .membership__card-ticket {
+    margin: 19px auto 0;
+    height: 304px;
+    max-width: 600px;
+  }
+
+  .membership__card-ticket-logo {
+    width: 64.12px;
+    height: 50.69px;
+    top: 22px;
+    left: 24px;
+  }
+
+
+
+
+
+  .membership__card-visit-times {
+    margin: 18px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23.1525px;
+    line-height: 26px;
+  }
+
+  .membership__card-validity-period {
+    margin: 4px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 23.1525px;
+    line-height: 26px;
+  }
+
+  .membership__card-distributed {
+    margin: 24px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+  }
+
+  .membership__card-practics {
+    margin: 17px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    max-width: 100%;
+    line-height: 140%;
+  }
+
+  .membership__card-bonus {
+    margin: 20px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    max-width: 100%;
+    line-height: 140%;
+  }
+
+  .membership__card-btn {
+    padding: 16px 0;
+  }
+
+  .membership__card-btn-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 19.5105px;
+    line-height: 22px;
+  }
+
+  .membership__card-btn-plug {
+    margin: 80px 0 0;
+  }
+
+  .membership__card-more {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+  }
+}
+
+@media (max-width: 485px) {
+  .membership__title {
+    font-style: normal;
+    font-weight: normal;
     font-size: 24px;
     line-height: 27px;
   }
-  .membership__card-title {
-    font-size: 20px;
-    line-height: 22px;
+
+  .membership__cards {
+    margin: 40px 0 0;
+    flex-direction: column;
+    justify-content: center;
   }
-  .membership__card-subscription-logo {
-    top: 14px;
-    left: 14px;
+
+  .membership__cards_second_row {
+    margin: 20px 0 0;
   }
-  .membership__card-subscription {
-    width: 284px;
-    height: 172px;
+
+  .membership__card {
+    padding: 14px 12px 12px 12px;
+    max-width: calc(100% - 12px - 12px);
+    margin: 20px 0 0;
+    height: fit-content;
   }
-  .membership__card-advantages {
-    font-size: 12px;
-    line-height: 13px;
+
+  .membership__card:first-of-type {
+    margin: 0;
   }
-  .membership__card-price {
+
+  .membership__card:last-of-type {
+    margin: 20px 0 0;
+  }
+
+  .membership__card-name {
+    font-style: normal;
+    font-weight: normal;
     font-size: 16px;
-    line-height: 130%;
+    line-height: 18px;
   }
-  .membership__card-text-container {
-    margin: -20px 0 0 20px;
-    padding: 32px 12px 20px 12px;
-    width: 254px;
+
+
+  .membership__card-price {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
   }
-  .membership__card-buy-button-arrow {
-    width: 100%;
+
+
+  .membership__card-ticket {
+    margin: 8px auto 0;
+    height: 165px;
+    max-width: 300px;
+    border-radius: 12px;
+  }
+
+  .membership__card-ticket-logo {
+    width: 34.75px;
+    height: 28.18px;
+    top: 12px;
+    left: 12px;
+  }
+
+
+
+
+
+  .membership__card-visit-times {
+    margin: 12px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .membership__card-validity-period {
+    margin: 4px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .membership__card-distributed {
+    margin: 20px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10.8571px;
+    line-height: 100%;
+  }
+
+  .membership__card-practics {
+    margin: 8px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .membership__card-bonus {
+    margin: 20px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
+  }
+
+  .membership__card-btn {
+    padding: 10px 0;
+  }
+
+  .membership__card-btn-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 10.6074px;
+    line-height: 12px;
+  }
+
+  .membership__card-btn-plug {
+    margin: 40px 0 0;
+  }
+
+  .membership__card-more {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 140%;
   }
 }
