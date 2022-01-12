@@ -139,11 +139,11 @@ const slides = [
 function Main(props) {
   return (
     <div className="main">
-      <MainHeadVideo screenWidth={props.screenWidth}/>
+      {/* <MainHeadVideo screenWidth={props.screenWidth}/> */}
       <AboutSpace screenWidth={props.screenWidth} slides={slides}/>
       <WhyUs screenWidth={props.screenWidth} slides={whyUsSlides}/>
       <Membership />
-      <OneTimeVisit />
+      {/* <OneTimeVisit /> */}
     </div>
   );
 }

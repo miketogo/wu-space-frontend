@@ -34,9 +34,12 @@ function Header(props) {
         <NavLink exact to="/" className="header__nav-link" activeClassName="header__nav-link_active">
           Главная
         </NavLink>
-        <a  className="header__nav-link header__nav-link_disabled" >
+        <a className="header__nav-link header__nav-link_disabled" >
           Услуги
         </a>
+        <NavLink to="/provodniki" className="header__nav-link" activeClassName="header__nav-link_active">
+          проводники
+        </NavLink>
         <NavLink to="/contacts" className="header__nav-link" activeClassName="header__nav-link_active">
           контакты
         </NavLink>

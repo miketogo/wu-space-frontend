@@ -1,0 +1,325 @@
+.team {
+    margin: 130px 0 0;
+    padding: 102px 40px 0;
+}
+
+.team__title {
+    margin: 0;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 54px;
+    /* identical to box height */
+
+    text-transform: uppercase;
+
+    /* text white */
+
+    color: #F1EBE5;
+
+}
+
+.team__cards {
+    margin: 80px 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(910px, 1fr));
+    grid-template-rows: 486px;
+    grid-auto-rows: 486px;
+    row-gap: 20px;
+    column-gap: 20px;
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.team__card {
+    background: #5E190C;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.team__card-img {
+    margin: 0 28px 0 0;
+}
+
+.team__card-texts {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team__card-name {
+    margin: 28px 0 0;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 100%;
+    /* identical to box height, or 36px */
+
+
+    color: #FFFFFF;
+
+}
+
+.team__card-teaches {
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+
+    opacity: 0.76;
+    margin: 28px 0 0;
+}
+
+.team__card-practics {
+    margin: 12px 0 0;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 130%;
+    /* or 26px */
+
+
+    color: #FFFFFF;
+    max-width: calc(100% - 46px);
+}
+
+.team__card-practics-nowarp {
+    word-wrap: none;
+    white-space: nowrap;
+}
+
+.team__card-desc {
+    margin: 40px 0 0;
+    max-height: 84px;
+    max-width: calc(100% - 46px);
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 140%;
+    /* or 28px */
+
+
+    color: #FFFFFF;
+
+
+}
+
+.team__card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 16px 20px;
+    border: 1.23278px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    width: fit-content;
+    margin: auto 17px 16px auto;
+    text-decoration: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.team__card-btn:hover {
+    opacity: 0.7;
+}
+
+.team__card-btn-text {
+    margin: 0;
+    font-family: Comfortaa;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    /* identical to box height, or 108% */
+
+    width: fit-content;
+    color: #FFFFFF;
+    text-decoration: none;
+
+}
+
+@media (max-width: 1137px) {
+    .team {
+        padding: 102px 20px 0;
+    }
+}
+
+@media (max-width: 588px) {
+    .team {
+        padding: 102px 8px 0;
+    }
+}
+
+@media (max-width: 1510px) {
+    .team__cards {
+        margin: 87px 0 0;
+    }
+
+    .team__card-desc {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 140%;
+    }
+}
+
+@media (max-width: 964px) {
+    .team {
+        margin: 108px 0 0;
+    }
+
+    .team__card {
+        flex-direction: column;
+        margin: 20px 0 0;
+        height: fit-content;
+        align-items: flex-start;
+    }
+
+    .team__card:first-of-type {
+        margin: 0;
+    }
+
+    .team__card-img {
+        margin: 0;
+        width: 100%;
+        height: 498px;
+        object-fit: cover;
+        object-position: 0 -100px;
+    }
+
+    .team__cards {
+        margin: 64px 0 0;
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: unset;
+        grid-template-rows: unset;
+        grid-auto-rows: unset;
+        row-gap: unset;
+        column-gap: unset;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .team__card-texts {
+        height: 486px;
+        margin: 0 0 0 28px;
+        max-width: calc(100% - 28px);
+    }
+
+    .team__card-name {
+        margin: 28px 0 0;
+        max-width: calc(100% - 28px);
+    }
+
+    .team__card-teaches {
+        max-width: calc(100% - 28px);
+    }
+
+    .team__card-desc {
+        max-width: calc(100% - 28px);
+        margin: 14px 0 0;
+    }
+
+    .team__card-practics {
+        max-width: calc(100% - 28px);
+    }
+
+    .team__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 536px) {
+
+    .team {
+        margin: 67px 0 0;
+        padding: 62px 8px 0;
+    }
+
+
+    .team__card-img {
+        height: 260px;
+        object-fit: cover;
+        object-position: 0 -50px;
+    }
+
+    .team__cards {
+        margin: 41px 0 0;
+    }
+
+    .team__card-texts {
+        height: 256px;
+        margin: 0 0 0 13px;
+        max-width: calc(100% - 13px);
+    }
+
+    .team__card-name {
+        margin: 28px 0 0;
+        max-width: calc(100% - 13px);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 100%;
+    }
+
+    .team__card-teaches {
+        max-width: calc(100% - 13px);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 11px;
+        margin: 12px 0 0;
+
+    }
+
+    .team__card-practics {
+        margin: 9px 0 0;
+        max-width: calc(100% - 13px);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 10px;
+        line-height: 130%;
+    }
+
+    .team__card-desc {
+        max-width: calc(100% - 13px);
+        margin: 11px 0 0;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 140%;
+    }
+
+    .team__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 27px;
+    }
+
+    .team__card-btn {
+        margin: auto 11px 11px auto;
+        padding: 10px;
+    }
+
+    .team__card-btn-text {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 100%;
+    }
+}

@@ -8,6 +8,7 @@ import Header from '../Header/Header';
 import MenuPopup from '../MenuPopup/MenuPopup';
 import Footer from '../Footer/Footer';
 import Contacts from '../Contacts/Contacts';
+import Team from '../Team/Team';
 
 function App() {
   const [isMenuPopupOpen, setMenuPopupOpen] = React.useState(false);
@@ -62,6 +63,9 @@ function App() {
           </Route>
           <Route path="/contacts">
             <Contacts screenWidth={screenWidth}/>
+          </Route>
+          <Route path="/provodniki">
+            <Team />
           </Route>
         </Switch>
         <Footer screenWidth={screenWidth} />

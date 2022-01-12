@@ -70,7 +70,7 @@
   height: 102px;
 }
 
-@media (max-width: 1137px) {
+@media (max-width: 1197px) {
   .header__logo {
     margin-left: 20px;
   }
