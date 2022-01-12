@@ -78,7 +78,7 @@ function Team(props) {
                                 {Array.isArray(item.practics) ? item.practics.map((practic, practic_i) => (
                                     <>
                                         <span key={`practic-${practic_i}-for-team-card-${i}`} className="team__card-practics-nowarp">{`${practic}${item.practics.length - 1 === practic_i ? '': ','}`}</span>
-                                        <span>&ensp;</span>
+                                        <span> </span>
                                     </>
                                 )) : item.practics}
                             </p>
