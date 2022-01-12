@@ -2,11 +2,11 @@ import React from 'react';
 
 import './Main.css'
 
-import MainHeadVideo from '../MainHeadVideo/MainHeadVideo';
+// import MainHeadVideo from '../MainHeadVideo/MainHeadVideo';
 import AboutSpace from '../AboutSpace/AboutSpace';
 import WhyUs from '../WhyUs/WhyUs';
 import Membership from '../Membership/Membership';
-import OneTimeVisit from '../OneTimeVisit/OneTimeVisit';
+// import OneTimeVisit from '../OneTimeVisit/OneTimeVisit';
 
 import firstSlide from '../../assets/images/about-space/first.png'
 import firstPrevInactive from '../../assets/images/about-space/first-prew-inactive.png'
