@@ -10,7 +10,7 @@ import './AboutSpace.css'
 
 function AboutSpace(props) {
   const [pervSlideId, setPervSlideId] = React.useState(0);
-  const [isSlideIdLoaded, setSlideIdLoaded] = React.useState(false);
+
 
   const [slideId, setSlideId] = React.useState(0);
 
@@ -26,7 +26,7 @@ function AboutSpace(props) {
       }, 500);
 
     }
-  }, [pervSlideId, slideId, isSlideIdLoaded]);
+  }, [pervSlideId, slideId]);
 
 
 
