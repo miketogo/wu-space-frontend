@@ -340,6 +340,10 @@
 
 
 @media (max-width: 1012px) {
+
+  .membership__card_hidden{
+    display: none;
+  }
   .membership__title {
     font-style: normal;
     font-weight: normal;
