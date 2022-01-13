@@ -113,7 +113,7 @@ function Membership(props) {
               <img className="membership__card-ticket-logo" src={logo} alt='Wu' />
             </div>
             <p className="membership__card-visit-times">Количесво посещений: {card.visit_times}</p>
-            {card.type != 4 ?
+            {card.type !== 4 ?
               <p className="membership__card-validity-period">Срок действия: {card.validity_period}</p>
               :
               <p className="membership__card-validity-period">&ensp;</p>
