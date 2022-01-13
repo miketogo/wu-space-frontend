@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 
+import ReactPlayer from 'react-player'
+
 import './TeamMember.css'
 
 
@@ -11,6 +13,9 @@ function TeamMember(props) {
     let { name } = useParams();
 
     const [member, setMember] = React.useState(null);
+
+
+    const [isButtonClicked, setButtonClicked] = React.useState(false);
 
     React.useEffect(() => {
         let member = props.team.filter((item) => {
@@ -34,6 +39,39 @@ function TeamMember(props) {
                 <>
                     <div className='team-member__info'>
                         <div className='team-member__video'>
+                            {member.video ?
+                                <button className={`team-member__button ${isButtonClicked ? 'team-member__button_playing' : ''}`} onClick={() => setButtonClicked(!isButtonClicked)}>
+                                    {isButtonClicked ?
+                                        <>
+                                            <svg className='team-member__button-pause' width="36" height="46" viewBox="0 0 36 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect className='team-member__button-pause-rect' width="6" height="46" rx="3" />
+                                                <rect className='team-member__button-pause-rect' x="30" width="6" height="46" rx="3" />
+                                            </svg>
+                                        </> :
+                                        <>
+                                            <svg className='team-member__button-play' width="43" height="48" viewBox="0 0 43 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path className='team-member__button-play-path' d="M39.1405 25.3044L5.49072 44.4136C4.49076 44.9814 3.25 44.2592 3.25 43.1092L3.25 4.89076C3.25 3.74081 4.49076 3.01855 5.49073 3.58642L39.1405 22.6957C40.1529 23.2706 40.1529 24.7294 39.1405 25.3044Z" strokeWidth="5" />
+                                            </svg>
+                                            <p className='team-member__button-text'>Смотреть<br />Show real</p>
+                                        </>
+                                    }
+                                </button> : <></>}
+                            {member.video ?
+                                <ReactPlayer className='team-member__video-player'
+
+                                    volume={0.4}
+                                    allowsInlineMediaPlayback={true}
+
+                                    url={member.video}
+                                    playsInline={true}
+                                    width="100%"
+                                    height="100%"
+                                    playing={isButtonClicked}
+                                    onError={error => console.log(error)}
+                                />
+                                :
+                                <img className='team-member__no-video' src={member.photo} alt={member.name}/>
+                            }
 
                         </div>
                         <div className='team-member__texts'>
@@ -43,13 +81,13 @@ function TeamMember(props) {
                     </div>
                     <p className='team-member__teaches'>Ведет практики:</p>
                     <p className="team-member__practics">
-                                {Array.isArray(member.practics) ? member.practics.map((practic, practic_i) => (
-                                    <>
-                                        <span key={`practic-${practic_i}`} className="team-member__practics-nowarp">{`${practic}${member.practics.length - 1 === practic_i ? '': ','}`}</span>
-                                        <span> </span>
-                                    </>
-                                )) : member.practics}
-                            </p>
+                        {Array.isArray(member.practics) ? member.practics.map((practic, practic_i) => (
+                            <>
+                                <span key={`practic-${practic_i}`} className="team-member__practics-nowarp">{`${practic}${member.practics.length - 1 === practic_i ? '' : ','}`}</span>
+                                <span> </span>
+                            </>
+                        )) : member.practics}
+                    </p>
                 </> :
                 <></>}
 

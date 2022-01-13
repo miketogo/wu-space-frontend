@@ -9,18 +9,27 @@ import MenuPopup from '../MenuPopup/MenuPopup';
 import Footer from '../Footer/Footer';
 import Contacts from '../Contacts/Contacts';
 import Team from '../Team/Team';
+import TeamMember from '../Team/TeamMember/TeamMember';
+
 
 import photo1 from '../../assets/images/team/1.png'
 import photo2 from '../../assets/images/team/2.png'
 import photo3 from '../../assets/images/team/3.png'
 import photo4 from '../../assets/images/team/4.png'
 import photo5 from '../../assets/images/team/5.png'
-import TeamMember from '../Team/TeamMember/TeamMember';
+
+import anastar from '../../assets/videos/team/anasttar.mp4'
+import alexkir from '../../assets/videos/team/alexkir.mp4'
+// import alexrih from '../../assets/videos/team/alexrih.mp4'
+import tattreh from '../../assets/videos/team/tattreh.mp4'
+import ulsot from '../../assets/videos/team/ulsot.mp4'
+
 const team = [
   {
       name: 'Анастасия Тарасенко',
       link: 'anastasiya-tarasenko',
       photo: photo1,
+      video: anastar,
       practics: [
           'Индивидуально',
           'Йога Нидра',
@@ -29,6 +38,7 @@ const team = [
           'Urban Zen',
           'Хатха-Йога'
       ],
+
       short_desc: 'Анастасия Тарасенко познакомилась с  йогой 16 лет назад, успев пройти за эти годы свой собственный путь становления...',
       desc: 'Анастасия Тарасенко познакомилась с  йогой 16 лет назад, успев пройти за эти годы свой собственный путь становления. Мастер прошла обучение в Open California Institute, а также в Школе йоги «Чатуранга» по направлениям «Построение последовательностей» и «Тичерс». Но именно личные трансформации помогли Анастасии стать очень чутким проводником, понимающим ваши сложности и ограничения. Важная часть в практиках Насти отводится физическому аспекту. Её авторская практика состоит из набора техник разных направлений для максимальной проработки вашего ментального, духовного и физического состояния.'
   },
@@ -37,6 +47,7 @@ const team = [
       name: 'Татьяна Трещалова',
       link: 'tatiyana-treshchalova',
       photo: photo2,
+      video: tattreh,
       practics: 'Индивидуальная гонг-сессия, Шампанское путешествие, Ракета желаний, Гонг+Pane, Кундалини-Йога + Гонг + Йога-Нидра',
       short_desc: 'Татьяна Трещалова – Мастер кундалини-йоги школы Йоги Бхаджана и ученица Карта Сингха в Kundalini Research Institute...',
       desc: 'Татьяна Трещалова – Мастер кундалини-йоги школы Йоги Бхаджана и ученица Карта Сингха в Kundalini Research Institute. В 2013 году Татьяна прошла курс обучения йоги для детей по программе Childplay yoga у Гурудас Каур, который позволяет ей глубоко чувствовать психологию и состояние детей, находить с ними наиважнейшие точки соприкосновения. Мастер закончила обучение в школе холистического звука Дона Конро и у лучших мастеров гонга, Тома Солтрона в Польше, Алиции и Ричардаса Эйлякас в Литве. За время многолетней практики и обучения Татьяна в совершенстве овладела техникой игры на гонге.'
@@ -55,6 +66,7 @@ const team = [
       name: 'Ульяна Сотникова',
       link: 'ulyana-sotnikova',
       photo: photo4,
+      video: ulsot,
       practics: [
           'АкроЙога',
       ],
@@ -66,6 +78,7 @@ const team = [
       name: 'Александр Кириченко',
       link: 'aleksandr-kirichenko',
       photo: photo5,
+      video: alexkir,
       practics: [
           'Аромадиагностика',
           'Нео-тантра',
