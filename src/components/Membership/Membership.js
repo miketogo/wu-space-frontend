@@ -3,6 +3,7 @@ import React from 'react';
 import './Membership.css'
 
 import logo from '../../assets/images/membership/logo.png'
+import { Link } from 'react-router-dom';
 
 const first_row = [
   {
@@ -60,8 +61,14 @@ const second_row = [
     type: 2,
   },
   {
-
-    type: 3,
+    name: 'Базовая практика',
+    price: '1000 ₽',
+    ticket_class: 'membership__card-ticket_var_onetime',
+    visit_times: 'Единоразово',
+    validity_period: '',
+    practics: 'Любая базовая практика при первом посещении WU-space. Soft benefits - чай, полезные угощения, пространство для релаксации и общения после практики.',
+    bonus: '',
+    type: 4,
   },
 ]
 
@@ -106,9 +113,14 @@ function Membership(props) {
               <img className="membership__card-ticket-logo" src={logo} alt='Wu' />
             </div>
             <p className="membership__card-visit-times">Количесво посещений: {card.visit_times}</p>
-            <p className="membership__card-validity-period">Срок действия: {card.validity_period}</p>
+            {card.type != 4 ?
+              <p className="membership__card-validity-period">Срок действия: {card.validity_period}</p>
+              :
+              <p className="membership__card-validity-period">&ensp;</p>
+            }
+
             <p className="membership__card-distributed">Распространяется для праткик:</p>
-            <p className="membership__card-practics">{card.practics}{moreIdOpened === `second-row-card-member-id${i}` && card.more_practics? ` ${card.more_practics}` : ''}</p>
+            <p className="membership__card-practics">{card.practics}{moreIdOpened === `second-row-card-member-id${i}` && card.more_practics ? ` ${card.more_practics}` : ''}</p>
             {moreIdOpened === `second-row-card-member-id${i}` ?
               <>
                 {/* {card.more_practics ?
@@ -121,8 +133,14 @@ function Membership(props) {
               :
               card.type === 2 ?
                 <p className="membership__card-more" onClick={() => { setMoreIdOpened(`second-row-card-member-id${i}`) }}>Подробнее</p> :
-                <p className="membership__card-bonus">{card.bonus}</p>
+                card.type === 4 ? <></> : <p className="membership__card-bonus">{card.bonus}</p>
             }
+            {card.type === 4 ?
+              <Link className="membership__card-link" to='/'>
+                <p className="membership__card-link-text">Узнать про базовые практики </p>
+              </Link>
+              :
+              <></>}
             <span className="membership__card-btn-plug"></span>
             <div className="membership__card-btn">
               <p className="membership__card-btn-text">Приобрести</p>
