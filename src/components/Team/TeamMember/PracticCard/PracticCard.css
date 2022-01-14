@@ -1,0 +1,133 @@
+.practic-card {
+  position: relative;
+  height: 456px;
+  margin: 97px 0 0;
+}
+
+.practic-card:first-of-type {
+  margin: 0;
+}
+
+.practic-card__img {
+  position: absolute;
+  width: 288px;
+  height: 326px;
+  z-index: 1;
+}
+
+.practic-card__date {
+  position: absolute;
+  z-index: 2;
+  top: 85px;
+  left: 298px;
+  margin: 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+
+  color: #FFFFFF;
+
+}
+
+.practic-card__texts {
+  width: fit-content;
+  position: absolute;
+  top: 123px;
+  left: 255px;
+  background: #81816C;
+  z-index: 2;
+  max-width: calc(100% - 255px - 57px - 22px);
+  padding: 28px 57px 18px 22px;
+}
+
+
+.practic-card__name {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  width: fit-content;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+
+.practic-card__desc {
+  margin: 16px 0 27px;
+
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+
+  color: #FFFFFF;
+  max-width: 813px;
+}
+
+
+.practic-card__info {
+  display: flex;
+  flex-direction: row;
+  margin: 16px 0 0;
+}
+
+.practic-card__info-item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px 0 0;
+}
+
+.practic-card__info-item:last-of-type {
+  margin: 0;
+}
+
+
+.practic-card__info-item-name {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  /* identical to box height, or 125% */
+
+
+  /* main/300 */
+  margin: 0;
+  color: #DFDFDE;
+}
+
+
+.practic-card__info-data {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 12px 0 0;
+}
+
+
+.practic-card__info-data-icon {
+  margin: 0 4px 0 0;
+}
+
+
+.practic-card__info-data-text {
+  margin: 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  /* identical to box height */
+
+
+  color: #FFFFFF;
+
+
+}
