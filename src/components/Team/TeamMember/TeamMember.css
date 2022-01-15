@@ -350,6 +350,20 @@ video {
   }
 }
 
+@media (max-width: 1273px){
+  .team-member__practic-cards {
+    width: calc(100% - 26px * 2);
+    margin: 61px auto 0;
+  }
+}
+
+@media (max-width: 1081px){
+  .team-member__practic-cards {
+    width: 100%;
+    margin: 30px auto 0;
+  }
+}
+
 @media (max-width: 1195px) {
   .team-member__title {
     font-style: normal;

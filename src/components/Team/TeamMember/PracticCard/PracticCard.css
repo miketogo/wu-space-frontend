@@ -18,8 +18,8 @@
 .practic-card__date {
   position: absolute;
   z-index: 2;
-  top: 85px;
-  left: 298px;
+  top: -38px;
+  left: 43px;
   margin: 0;
   font-family: Comfortaa;
   font-style: normal;
@@ -129,5 +129,185 @@
 
   color: #FFFFFF;
 
+
+}
+
+
+.practic-card__btn {
+  position: absolute;
+  bottom: calc(-18px - 24px - 38px);
+  right: 0;
+  border: 2px solid #FFFFFF;
+
+  border-radius: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.practic-card__btn-text {
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.practic-card__info__tow-first {
+  display: flex;
+  flex-direction: row;
+  margin: 0 32px 0 0;
+}
+
+
+
+@media (max-width: 1034px) {
+  .practic-card {
+    position: relative;
+    height: fit-content;
+    margin: 50px 0 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .practic-card__img {
+    position: relative;
+    width: 100%;
+    height: 377px;
+    z-index: 1;
+    object-fit: cover;
+  }
+
+  .practic-card__date {
+    position: relative;
+    top: unset;
+    left: unset;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 28px;
+
+  }
+
+  .practic-card__texts {
+    width: 100%;
+    position: relative;
+    top: unset;
+    left: unset;
+    max-width: calc(100% - 20px - 20px);
+    padding: 30px 20px 20px 20px;
+  }
+
+  .practic-card__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 36px;
+    margin: 19px 0 0;
+  }
+
+  .practic-card__desc {
+    margin: 20px 0;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .practic-card__info {
+    flex-direction: column;
+    margin: 5px 0 0;
+  }
+
+  .practic-card__info__tow-first {
+    margin: 0 0 22px 0;
+
+  }
+  .practic-card__btn {
+    position: relative;
+    bottom: unset;
+    right: unset;
+    padding: 16px 0;
+    width: 100%;
+    margin: 48px 0 0;
+  }
+}
+
+@media (max-width: 590px) {
+  .practic-card {
+    margin: 44px 0 0;
+  }
+  .practic-card__img {
+    height: 208px;
+  }
+  .practic-card__texts {
+    max-width: calc(100% - 8px - 8px);
+    padding: 14px 8px 12px 8px;
+  }
+
+  .practic-card__date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .practic-card__name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    margin: 24px 0 0;
+  }
+  .practic-card__desc {
+    margin: 8px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .practic-card__info {
+    margin: 16px 0 0;
+  }
+  .practic-card__info-item-name {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .practic-card__info-data {
+    margin: 4px 0 0;
+    align-items: center;
+  }
+  
+  
+  .practic-card__info-data-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  
+  .practic-card__info-data-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;  
+  }
+  .practic-card__info__tow-first {
+    margin: 0 0 18px 0;
+
+  }
+  .practic-card__btn {
+    padding: 12px 0;
+    margin: 16px 0 0;
+  }
 
 }

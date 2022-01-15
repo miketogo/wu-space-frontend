@@ -18,8 +18,11 @@ import aleksandr_demidov_img from '../../assets/images/team/aleksandr-demidov.pn
 import ulyana_sotnikova_img from '../../assets/images/team/ulyana-sotnikova.png'
 import aleksandr_kirichenko_img from '../../assets/images/team/aleksandr-kirichenko.png'
 import alexander_ryshkov_img from '../../assets/images/team/alexander-ryshkov.png'
-import plug from '../../assets/images/team/plug.png'
 import ekaterina_petina_img from '../../assets/images/team/ekaterina-petina.png'
+import timur_abdrakhmanov_img from '../../assets/images/team/timur-abdrakhmanov.png'
+import plug from '../../assets/images/team/plug.png'
+
+
 
 import anastasiya_tarasenko_video from '../../assets/videos/team/anastasiya-tarasenko.mp4'
 import aleksandr_kirichenko_video from '../../assets/videos/team/aleksandr-kirichenko.mp4'
@@ -105,7 +108,7 @@ const team = [
   {
     name: 'Тимур Абдрахманов',
     link: 'timur-abdrakhmanov',
-    photo: plug,
+    photo: timur_abdrakhmanov_img,
     practics: [
       'Японская йога Дарума-Тайсо',
     ],

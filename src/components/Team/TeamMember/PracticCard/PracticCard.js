@@ -9,37 +9,45 @@ function PracticCard(props) {
   return (
     <div className="practic-card">
       <img className="practic-card__img" src={test_img} alt="Фото практики" />
-      <p className="practic-card__date">{props.dateNow && props.dateNow} / 18:00</p>
+
       <div className="practic-card__texts">
+        <p className="practic-card__date">{props.dateNow && props.dateNow} / 18:00</p>
         <p className="practic-card__name">Йога Нидра</p>
         <p className="practic-card__desc">Техника глубокого расслабления тела и сознания, созданная на основе древних тантрических практик.</p>
         <div className="practic-card__info">
-          <div className="practic-card__info-item">
-            <p className="practic-card__info-item-name">длительность</p>
-            <div className="practic-card__info-data">
-              <svg className="practic-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M27.9401 31L17.2301 16L27.9401 1H4.06006L14.7701 16L4.06006 31H27.9401ZM7.94006 3H24.0601L16.0001 14.28L7.94006 3ZM24.0601 29H7.94006L16.0001 17.72L24.0601 29Z" fill="#F9F9F9" />
-              </svg>
-              <p className="practic-card__info-data-text">90 мин.</p>
-            </div>
-          </div>
-          <div className="practic-card__info-item">
-            <p className="practic-card__info-item-name">стоимость</p>
-            <div className="practic-card__info-data">
-              <svg className="practic-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g clipPath="url(#clip0_847_3631)">
-                  <path d="M8.18742 0V16H5.33325V18.6667H8.18742V21.3333H5.33325V24H8.18742V32H10.8541V24H17.5208V21.3333H10.8541V18.6667H17.5234C22.5797 18.6533 26.6697 14.4499 26.6666 9.33594C26.6639 4.22407 22.5812 0 17.5208 0H8.18742ZM10.8541 2.66667H17.5208C21.1026 2.66667 23.9976 5.63121 23.9999 9.33854C24.0026 13.0439 21.1065 15.9943 17.5208 16H10.8541V2.66667Z" fill="#F9F9F9" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_847_3631">
-                    <rect width="32" height="32" fill="white" />
-                  </clipPath>
-                </defs>
-              </svg>
+          <div className="practic-card__info__tow-first">
 
-              <p className="practic-card__info-data-text">1500</p>
+            <div className="practic-card__info-item">
+              <p className="practic-card__info-item-name">длительность</p>
+              <div className="practic-card__info-data">
+                <svg className="practic-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M27.9401 31L17.2301 16L27.9401 1H4.06006L14.7701 16L4.06006 31H27.9401ZM7.94006 3H24.0601L16.0001 14.28L7.94006 3ZM24.0601 29H7.94006L16.0001 17.72L24.0601 29Z" fill="#F9F9F9" />
+                </svg>
+                <p className="practic-card__info-data-text">90 мин.</p>
+              </div>
             </div>
+            <div className="practic-card__info-item">
+              <p className="practic-card__info-item-name">стоимость</p>
+              <div className="practic-card__info-data">
+                <svg className="practic-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clipPath="url(#clip0_847_3631)">
+                    <path d="M8.18742 0V16H5.33325V18.6667H8.18742V21.3333H5.33325V24H8.18742V32H10.8541V24H17.5208V21.3333H10.8541V18.6667H17.5234C22.5797 18.6533 26.6697 14.4499 26.6666 9.33594C26.6639 4.22407 22.5812 0 17.5208 0H8.18742ZM10.8541 2.66667H17.5208C21.1026 2.66667 23.9976 5.63121 23.9999 9.33854C24.0026 13.0439 21.1065 15.9943 17.5208 16H10.8541V2.66667Z" fill="#F9F9F9" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_847_3631">
+                      <rect width="32" height="32" fill="white" />
+                    </clipPath>
+                  </defs>
+                </svg>
+
+                <p className="practic-card__info-data-text">1500</p>
+              </div>
+            </div>
+
+
           </div>
+
+
           <div className="practic-card__info-item">
             <p className="practic-card__info-item-name">кто ведет</p>
             <div className="practic-card__info-data">
@@ -50,6 +58,9 @@ function PracticCard(props) {
               <p className="practic-card__info-data-text">{props.name && props.name}</p>
             </div>
           </div>
+        </div>
+        <div className="practic-card__btn">
+          <p className="practic-card__btn-text">Записаться</p>
         </div>
       </div>
     </div>
