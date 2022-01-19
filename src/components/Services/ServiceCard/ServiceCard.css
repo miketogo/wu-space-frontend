@@ -81,7 +81,7 @@
 .service-card__info-item {
   display: flex;
   flex-direction: column;
-  margin: 0 32px 0 0;
+  margin: 0 12px 0 0;
 }
 
 .service-card__info-item:last-of-type {
@@ -106,19 +106,27 @@
 
 .service-card__info-data {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: flex-start;
-  margin: 12px 0 0;
+  padding: 12px;
+  margin: 0 0 0;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
 }
 
+.service-card__info-data_price {
+  min-width: 81px;
+}
 
 .service-card__info-data-icon {
-  margin: 0 4px 0 0;
+  margin: 0;
+  width: 24px;
+  height: 24px;
 }
 
 
 .service-card__info-data-text {
-  margin: 0;
+  margin: 24px 0 0;
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -163,10 +171,35 @@
 .service-card__info__tow-first {
   display: flex;
   flex-direction: row;
-  margin: 0 32px 0 0;
+  margin: 0 12px 0 0;
+}
+
+.service-card__more {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  text-decoration-line: underline;
+
+  color: #FFFFFF;
+  margin: 0;
+  position: absolute;
+  right: 21px;
+  bottom: 13px;
 }
 
 
+
+
+@media (max-width: 1200px) {
+  .service-card__more {
+    margin: 12px 0 0;
+    text-align: right;
+    position: relative;
+    right: unset;
+    bottom: unset;
+  }
+}
 
 @media (max-width: 1034px) {
   .service-card {
@@ -195,6 +228,14 @@
     font-size: 24px;
     line-height: 28px;
 
+  }
+
+  .service-card__info-item {
+    width: 50%;
+  }
+
+  .service-card__info-item_last {
+    width: 100%;
   }
 
   .service-card__texts {
@@ -232,13 +273,19 @@
     margin: 0 0 22px 0;
 
   }
+
   .service-card__btn {
     position: relative;
     bottom: unset;
     right: unset;
     padding: 16px 0;
     width: 100%;
+    margin: 24px 0 0;
+  }
+
+  .service-card__more {
     margin: 48px 0 0;
+    text-align: center;
   }
 }
 
@@ -246,9 +293,11 @@
   .service-card {
     margin: 44px 0 0;
   }
+
   .service-card__img {
     height: 208px;
   }
+
   .service-card__texts {
     max-width: calc(100% - 8px - 8px);
     padding: 14px 8px 12px 8px;
@@ -260,6 +309,7 @@
     font-size: 20px;
     line-height: 28px;
   }
+
   .service-card__name {
     font-style: normal;
     font-weight: normal;
@@ -267,6 +317,7 @@
     line-height: 22px;
     margin: 24px 0 0;
   }
+
   .service-card__desc {
     margin: 8px 0;
     font-style: normal;
@@ -274,40 +325,61 @@
     font-size: 16px;
     line-height: 18px;
   }
+
   .service-card__info {
     margin: 16px 0 0;
   }
+
   .service-card__info-item-name {
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 20px;
   }
+
   .service-card__info-data {
     margin: 4px 0 0;
-    align-items: center;
+    align-items: flex-start;
   }
-  
-  
+
+
   .service-card__info-data-icon {
-    width: 20px;
-    height: 20px;
+    width: 16px;
+    height: 16px;
   }
-  
-  
+
+
   .service-card__info-data-text {
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 22px;  
+    font-size: 16px;
+    line-height: 100%;
+    margin: 16px 0 0;
   }
+
   .service-card__info__tow-first {
     margin: 0 0 18px 0;
 
   }
+
   .service-card__btn {
     padding: 12px 0;
     margin: 16px 0 0;
   }
 
+  .service-card__btn-text {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .service-card__more {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 100%;
+    margin: 32px 0 0;
+    text-align: center;
+  }
 }

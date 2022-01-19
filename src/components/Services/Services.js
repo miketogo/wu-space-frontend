@@ -75,7 +75,7 @@ function Services(props) {
     <div className="services" id='services'>
       <h2 className="services__title">УСЛУГИ</h2>
       <div className="services__filters">
-        <div className="services__filter-container">
+        <div className="services__filter-container services__filter-container_type">
           <p className="services__filter-title services__filter-title_type_type">Выберете тип практики</p>
           <div className={`services__filter-box services__filter-box_type_type ${selectedTypeOpened ? 'services__filter-box_active' : ''}`}>
             <div className="services__filter-row" onClick={() => {
@@ -106,7 +106,7 @@ function Services(props) {
         </div>
 
         <div className="services__filter-container">
-          <p className="services__filter-title services__filter-title_type_type">Выберете тип практики</p>
+          <p className="services__filter-title services__filter-title_type_type">Выберете проводника</p>
           <div className={`services__filter-box services__filter-box_type_trainer ${selectedTrainerOpened ? 'services__filter-box_active' : ''}`}>
             <div className="services__filter-row" onClick={() => {
               setSelectedTrainerOpened(!selectedTrainerOpened)
@@ -142,8 +142,8 @@ function Services(props) {
           <p className="services__date-day-number">{dateOne.dayNumber}</p>
         </div>
         <div className="services__services-cards">
-          <ServiceCard dateNow={dateOne.date} name={'ffdd'} />
-          <ServiceCard dateNow={dateOne.date} name={'ffdd'} />
+          <ServiceCard dateNow={dateOne.date} name={'Анастасия Тарасенко'} />
+          <ServiceCard dateNow={dateOne.date} name={'Анастасия Тарасенко'} />
         </div>
       </div>
       <div className="services__date-and-cards">
@@ -152,8 +152,8 @@ function Services(props) {
           <p className="services__date-day-number">{dateTwo.dayNumber}</p>
         </div>
         <div className="services__services-cards">
-          <ServiceCard dateNow={dateTwo.date} name={'ffdd'} />
-          <ServiceCard dateNow={dateTwo.date} name={'ffdd'} />
+          <ServiceCard dateNow={dateTwo.date} name={'Анастасия Тарасенко'} />
+          <ServiceCard dateNow={dateTwo.date} name={'Анастасия Тарасенко'} />
         </div>
       </div>
       <p onClick={() => {

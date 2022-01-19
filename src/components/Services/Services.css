@@ -36,6 +36,10 @@
     position: relative;
 }
 
+.services__filter-container_type {
+    z-index: 6;
+}
+
 .services__filter-container:last-of-type {
     margin: 0;
 }
@@ -61,7 +65,7 @@
     display: flex;
     flex-direction: column;
     padding: 12px 20px;
-    background: rgba(139, 139, 138, 0);
+    background: rgba(139, 139, 138, 1);
     transition: background-color 0.3s ease-in-out;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
@@ -141,9 +145,13 @@
 }
 
 .services__date-and-cards {
-    margin: 104px 0 0;
+    margin: 20px 0 0;
     display: flex;
     flex-direction: row;
+}
+
+.services__date-and-cards:last-of-type {
+    margin: 104px 0 0;
 }
 
 .services__date {
@@ -197,7 +205,7 @@
 
 @media (max-width: 1034px) {
     .services__date-and-cards {
-        margin: 104px 0 0;
+
         display: flex;
         flex-direction: column;
     }
@@ -212,6 +220,98 @@
 
     .services__services-cards {
         margin: 44px 0 0;
+    }
+}
+
+@media (max-width: 720px) {
+    .services__filters {
+        flex-direction: column;
+    }
+
+    .services__filter-container {
+        display: flex;
+        flex-direction: column;
+        margin: 14px 0 0;
+        position: relative;
+    }
+
+    .services__filter-container:last-of-type {
+        margin: 14px 0 0;
+    }
+
+    .services__filter-container:first-of-type {
+        margin: 0;
+    }
+
+    .services__title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 512px) {
+    .services{
+        margin: 0;
+    }
+    .services__filter-box {
+        width: calc(100% - 12px * 2 - 2px * 2);
+        padding: 8px 12px;
+        position: relative;
+        top: unset;
+        left: unset;
+        margin: 8px 0 0;
+    }
+
+    .services__filter-title_type_type {
+        width: fit-content;
+        margin: 0;
+    }
+
+    .services__filter-item {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .services__filter-dropdown-item {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 28px;
+        margin: 8px 0 0;
+    }
+
+    .services__filter-dropdown {
+        margin: 8px 0 0;
+    }
+
+    .services__date-day-name {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    .services__date-day-number {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    .services__date-and-cards {
+        margin: 39px 0 0;
+    }
+
+    .services__services-cards {
+        margin: 19px 0 0;
+    }
+    .services__title {
+        font-size: 24px;
+        line-height: 27px;
     }
 }
 
