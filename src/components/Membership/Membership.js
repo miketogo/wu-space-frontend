@@ -15,6 +15,7 @@ const first_row = [
     practics: 'Хатха-йога, sleeping beauty, energy shot, йога-нидра, аштанга-йога, акро-йога, кундалини-йога',
     bonus: 'Одно бесплатное посещение любой базовой практики для друга',
     type: 1,
+    link: 'https://o1411.yclients.com/loyalty/subscription/332383/form',
   },
   {
     name: 'Masters',
@@ -25,6 +26,7 @@ const first_row = [
     practics: 'UrbanZen, Кундалини-Нидра-Гонг, Нео-тантра, Дарума-Тайсо',
     bonus: 'Одно бесплатное посещение любой базовой практики для друга',
     type: 1,
+    link: 'https://o1411.yclients.com/loyalty/subscription/332390/form',
   },
   {
     name: 'WU Star',
@@ -35,6 +37,7 @@ const first_row = [
     practics: 'Абонемент действует для всех видов базовых и авторских практик всех мастеров WU-space',
     bonus: 'Одно бесплатное посещение любой практики WU-special',
     type: 1,
+    link: 'https://o1411.yclients.com/loyalty/subscription/332383/form',
   },
 ]
 
@@ -95,9 +98,9 @@ function Membership(props) {
             <p className="membership__card-practics">{card.practics}</p>
             <p className="membership__card-bonus">{card.bonus}</p>
             <span className="membership__card-btn-plug"></span>
-            <div className="membership__card-btn">
+            <a target="_blank" rel="noreferrer" href={card.link} className="membership__card-btn">
               <p className="membership__card-btn-text">Приобрести</p>
-            </div>
+            </a>
           </div>
         ))}
 
