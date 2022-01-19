@@ -29,6 +29,7 @@ import aleksandr_kirichenko_video from '../../assets/videos/team/aleksandr-kiric
 import alexander_ryshkov_video from '../../assets/videos/team/alexander-ryshkov.mp4'
 import tatiyana_treshchalova_video from '../../assets/videos/team/tatiyana-treshchalova.mp4'
 import ulyana_sotnikova_video from '../../assets/videos/team/ulyana-sotnikova.mp4'
+import Services from '../Services/Services';
 
 const team = [
   {
@@ -195,6 +196,9 @@ function App() {
           </Route>
           <Route exact path="/provodniki">
             <Team team={team} />
+          </Route>
+          <Route path="/services">
+            <Services />
           </Route>
           <Route path="/provodniki/:name">
             <TeamMember team={team} />
