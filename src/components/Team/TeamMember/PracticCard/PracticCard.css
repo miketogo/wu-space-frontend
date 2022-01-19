@@ -134,6 +134,7 @@
 
 
 .practic-card__btn {
+  cursor: pointer;
   position: absolute;
   bottom: calc(-18px - 24px - 38px);
   right: 0;
@@ -145,6 +146,7 @@
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .practic-card__btn-text {
@@ -155,7 +157,7 @@
   line-height: 28px;
   /* identical to box height, or 140% */
 
-
+  transition: color 0.3s ease-in-out;
   color: #FFFFFF;
   margin: 0;
 }
@@ -166,7 +168,12 @@
   margin: 0 32px 0 0;
 }
 
-
+.practic-card__btn:hover{
+  background-color: rgba(255, 255, 255, 1);
+}
+.practic-card__btn:hover .practic-card__btn-text{
+  color: #48481C;
+}
 
 @media (max-width: 1034px) {
   .practic-card {

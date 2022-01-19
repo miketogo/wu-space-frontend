@@ -142,20 +142,23 @@
 
 
 .service-card__btn {
+  cursor: pointer;
   position: absolute;
   bottom: calc(-18px - 24px - 38px);
   right: 0;
   border: 2px solid #FFFFFF;
-
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 12px 20px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .service-card__btn-text {
+  transition: color 0.3s ease-in-out;
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -168,6 +171,13 @@
   margin: 0;
 }
 
+.service-card__btn:hover{
+  background-color: rgba(255, 255, 255, 1);
+}
+.service-card__btn:hover .service-card__btn-text{
+  color: #48481C;
+}
+
 .service-card__info__tow-first {
   display: flex;
   flex-direction: row;
@@ -175,12 +185,13 @@
 }
 
 .service-card__more {
+  cursor: pointer;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 28px;
   text-decoration-line: underline;
-
+  transition: color 0.3s ease-in-out;
   color: #FFFFFF;
   margin: 0;
   position: absolute;
@@ -188,7 +199,9 @@
   bottom: 13px;
 }
 
-
+.service-card__more:hover{
+  color: #CACACA;
+}
 
 
 @media (max-width: 1200px) {

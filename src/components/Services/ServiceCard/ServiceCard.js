@@ -12,8 +12,8 @@ function PracticCard(props) {
 
       <div className="service-card__texts">
         <p className="service-card__date">{props.dateNow && props.dateNow} / 18:00</p>
-        <p className="service-card__name">Йога Нидра</p>
-        <p className="service-card__desc">Техника глубокого расслабления тела и сознания, созданная на основе древних тантрических практик.</p>
+        <p className="service-card__name">{props.service.name}</p>
+        <p className="service-card__desc">{props.service.short_desc}</p>
         <div className="service-card__info">
           <div className="service-card__info__tow-first">
 
@@ -23,7 +23,7 @@ function PracticCard(props) {
                 <svg className="service-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M27.9401 31L17.2301 16L27.9401 1H4.06006L14.7701 16L4.06006 31H27.9401ZM7.94006 3H24.0601L16.0001 14.28L7.94006 3ZM24.0601 29H7.94006L16.0001 17.72L24.0601 29Z" fill="#F9F9F9" />
                 </svg>
-                <p className="service-card__info-data-text">90 мин.</p>
+                <p className="service-card__info-data-text">{props.service.duration}</p>
               </div>
             </div>
             <div className="service-card__info-item">
@@ -40,7 +40,7 @@ function PracticCard(props) {
                   </defs>
                 </svg>
 
-                <p className="service-card__info-data-text">1500</p>
+                <p className="service-card__info-data-text">{props.service.price}</p>
               </div>
             </div>
 
@@ -59,7 +59,9 @@ function PracticCard(props) {
             </div>
           </div>
         </div>
-        <p className="service-card__more">Подробнее</p>
+        <p className="service-card__more" onClick={()=>{
+          props.setSelectedService(props.service)
+        }}>Подробнее</p>
         <div className="service-card__btn">
           <p className="service-card__btn-text">Записаться</p>
         </div>
