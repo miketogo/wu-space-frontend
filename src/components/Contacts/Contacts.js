@@ -42,11 +42,9 @@ function Contacts(props) {
                 balloonContentBody: [
                   `
                     <div class="baloon-content">
-                        <a href={link} class="baloon-content__title">WU-SPACE</a>
-                        <div class="baloon-content__body">{description}</div>
-                        <div class="baloon-content__link">
-                            <a href={link} class="baloon__link">Подробнее</a>
-                        </div>
+                        <p class="baloon-content__title">WU-SPACE</p>
+                        
+                       
                     </div>
                     `,
                 ].join("")

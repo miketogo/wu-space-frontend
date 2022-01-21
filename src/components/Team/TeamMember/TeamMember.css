@@ -8,6 +8,7 @@
   flex-direction: row;
   align-items: center;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .team-member__arrow {
@@ -99,7 +100,7 @@ video {
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
-  line-height: 100%;
+  line-height: 130%;
   /* or 32px */
 
 
@@ -340,7 +341,7 @@ video {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
-    line-height: 100%;
+    line-height: 130%;
   }
 
   .team-member__teaches {
@@ -412,7 +413,7 @@ video {
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
-    line-height: 100%;
+    line-height: 130%;
   }
 
   .team-member__teaches {
@@ -482,7 +483,7 @@ video {
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
-    line-height: 100%;
+    line-height: 130%;
   }
 
   .team-member__teaches {
