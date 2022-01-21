@@ -8,12 +8,13 @@ import test_img from '../../../../assets/images/practic-card/test.png'
 function PracticCard(props) {
   return (
     <div className="practic-card">
-      <img className="practic-card__img" src={test_img} alt="Фото практики" />
+      <img className="practic-card__img" src={props.service.img_link !== ''? `${props.service.img_link}` :test_img} alt="Фото практики" />
 
       <div className="practic-card__texts">
-        <p className="practic-card__date">{props.dateNow && props.dateNow} / 18:00</p>
-        <p className="practic-card__name">Йога Нидра</p>
-        <p className="practic-card__desc">Техника глубокого расслабления тела и сознания, созданная на основе древних тантрических практик.</p>
+        <p className="practic-card__date">{props.date && props.date}</p>
+        <p className="practic-card__capacity">Мест: {props.service.capacity}</p>
+        <p className="practic-card__name">{props.service && props.service.name}</p>
+        <p className="practic-card__desc">{props.service.short_desc}</p>
         <div className="practic-card__info">
           <div className="practic-card__info__tow-first">
 
@@ -23,7 +24,7 @@ function PracticCard(props) {
                 <svg className="practic-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M27.9401 31L17.2301 16L27.9401 1H4.06006L14.7701 16L4.06006 31H27.9401ZM7.94006 3H24.0601L16.0001 14.28L7.94006 3ZM24.0601 29H7.94006L16.0001 17.72L24.0601 29Z" fill="#F9F9F9" />
                 </svg>
-                <p className="practic-card__info-data-text">90 мин.</p>
+                <p className="practic-card__info-data-text">{props.service.duration} мин.</p>
               </div>
             </div>
             <div className="practic-card__info-item">
@@ -40,7 +41,7 @@ function PracticCard(props) {
                   </defs>
                 </svg>
 
-                <p className="practic-card__info-data-text">1500</p>
+                <p className="practic-card__info-data-text">{props.service.price}</p>
               </div>
             </div>
 
@@ -59,9 +60,9 @@ function PracticCard(props) {
             </div>
           </div>
         </div>
-        <div className="practic-card__btn">
+        <a className="practic-card__btn" href={props.service.link}>
           <p className="practic-card__btn-text">Записаться</p>
-        </div>
+        </a>
       </div>
     </div>
   );

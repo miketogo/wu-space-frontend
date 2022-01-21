@@ -42,7 +42,7 @@
   flex-direction: column;
   padding: 25px 20px 20px 20px;
   max-width: 510px;
-  min-height: 742px;
+  /* min-height: 742px; */
   width: calc(100% / 3 - 20px * 2);
   margin: 0 40px 0 0;
 }
@@ -318,7 +318,7 @@
     max-width: 387px;
     width: 100%;
     padding: 17px 14px 12px 14px;
-    min-height: 642px;
+    /* min-height: 642px; */
     margin: 0 20px 0 0;
   }
 
@@ -506,7 +506,7 @@
   }
 
   .membership__card-btn-plug {
-    margin: 80px 0 0;
+    margin: 50px 0 0;
   }
 
   .membership__card-more {

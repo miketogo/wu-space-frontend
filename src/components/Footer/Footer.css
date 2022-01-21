@@ -1,4 +1,5 @@
 .footer {
+  font-family: Inter;
   padding: 0 40px 100px;
   margin: 170px auto 0;
   display: flex;
@@ -29,7 +30,7 @@
   flex-direction: column;
   list-style: none;
   padding: 0;
-  margin: 0 45px 0 0;
+  margin: 0 30px 0 0;
 }
 
 .footer__nav-link:last-of-type {
@@ -38,11 +39,11 @@
 
 .footer__nav-link {
   text-decoration: none;
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
   color: #FFFFFF;
   margin: 0;
   transition: color ease-in-out 0.3s;
@@ -66,17 +67,17 @@
 }
 
 .footer__subscribe-text {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
-  font-size: 32px;
-  line-height: 36px;
+  font-size: 24px;
+  line-height: 29px;
   margin: 0;
   color: #FFFFFF;
 }
 
 .footer__input-title {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -121,7 +122,7 @@
   padding: 31px 15px 31px 20px;
   margin-top: 0;
   transition: border-bottom 0.3s ease-in-out;
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -134,7 +135,7 @@
 }
 
 .footer__input::placeholder {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -144,7 +145,7 @@
 }
 
 .footer__input-error {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   text-align: right;
@@ -168,7 +169,7 @@
 }
 
 .footer__submit-button-text {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -207,7 +208,7 @@
 }
 
 .footer__doc-link {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -224,7 +225,7 @@
 }
 
 .footer__copyright {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -250,7 +251,7 @@
   }
 }
 
-@media (max-width: 1556px) {
+@media (max-width: 1006px) {
   .footer__first-row {
     flex-direction: column;
     margin-top: 58px;
@@ -307,10 +308,10 @@
 }
 
 @media (max-width: 880px) {
-  .footer__nav-link {
+  /* .footer__nav-link {
     font-size: 32px;
     line-height: 36px;
-  }
+  } */
 }
 
 @media (max-width: 588px) {

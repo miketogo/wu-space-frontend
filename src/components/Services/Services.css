@@ -136,6 +136,7 @@
     transition: opacity 0.3s ease-in-out;
 }
 
+
 .services__filter-dropdown-item:first-of-type {
     margin: 0;
 }
@@ -143,16 +144,18 @@
 .services__filter-dropdown-item:hover {
     opacity: 0.7;
 }
-
+.services__filter-dropdown-item_inactive{
+    opacity: 0.3 !important; 
+}
 .services__date-and-cards {
-    margin: 20px 0 0;
+    margin: 104px 0 0;
     display: flex;
     flex-direction: row;
 }
-
-.services__date-and-cards:last-of-type {
-    margin: 104px 0 0;
+.services__date-and-cards:first-of-type {
+    margin: 20px 0 0;
 }
+
 
 .services__date {
     display: flex;

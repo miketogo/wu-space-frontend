@@ -6,12 +6,25 @@ import test_img from '../../../assets/images/practic-card/test.png'
 
 
 function PracticCard(props) {
+  const [isLoaded, setLoaded] = React.useState(false);
+
+  React.useEffect(() => {
+    if(props.service){
+      setTimeout(() => {
+        setLoaded(true)
+      }, 10);
+
+    }
+   
+  }, [props.service]);
+
   return (
-    <div className="service-card">
-      <img className="service-card__img" src={test_img} alt="Фото практики" />
+    <div className={`service-card ${isLoaded? 'service-card_loaded': ''}`}>
+      <img className="service-card__img" src={props.service.img_link !== ''? `${props.service.img_link}` :test_img} alt="Фото практики" />
 
       <div className="service-card__texts">
-        <p className="service-card__date">{props.dateNow && props.dateNow} / 18:00</p>
+        <p className="service-card__date">{props.date && props.date}</p>
+        <p className="service-card__capacity">Мест: {props.service.capacity}</p>
         <p className="service-card__name">{props.service.name}</p>
         <p className="service-card__desc">{props.service.short_desc}</p>
         <div className="service-card__info">
@@ -19,11 +32,11 @@ function PracticCard(props) {
 
             <div className="service-card__info-item">
               {/* <p className="service-card__info-item-name">длительность</p> */}
-              <div className="service-card__info-data">
+              <div className="service-card__info-data service-card__info-data_time">
                 <svg className="service-card__info-data-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M27.9401 31L17.2301 16L27.9401 1H4.06006L14.7701 16L4.06006 31H27.9401ZM7.94006 3H24.0601L16.0001 14.28L7.94006 3ZM24.0601 29H7.94006L16.0001 17.72L24.0601 29Z" fill="#F9F9F9" />
                 </svg>
-                <p className="service-card__info-data-text">{props.service.duration}</p>
+                <p className="service-card__info-data-text">{props.service.duration} мин.</p>
               </div>
             </div>
             <div className="service-card__info-item">
@@ -59,12 +72,12 @@ function PracticCard(props) {
             </div>
           </div>
         </div>
-        <p className="service-card__more" onClick={()=>{
+        <p className="service-card__more" onClick={() => {
           props.setSelectedService(props.service)
         }}>Подробнее</p>
-        <div className="service-card__btn">
+        <a className="service-card__btn" href={props.service.link}>
           <p className="service-card__btn-text">Записаться</p>
-        </div>
+        </a>
       </div>
     </div>
   );

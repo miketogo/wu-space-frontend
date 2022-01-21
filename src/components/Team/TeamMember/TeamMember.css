@@ -258,6 +258,18 @@ video {
   width: fit-content;
 }
 
+.team-member__no-practic-cards{
+  margin: 50px 0 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 22px;
+
+  color: #FFFFFF;
+  width: fit-content;
+}
+
 .team-member__date-day-number {
   font-family: Comfortaa;
   font-style: normal;

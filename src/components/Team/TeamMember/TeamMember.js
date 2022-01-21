@@ -3,13 +3,15 @@ import { Link, useParams } from 'react-router-dom';
 import moment from 'moment-timezone';
 import 'moment/locale/ru'
 
+
+
 import ReactPlayer from 'react-player'
 
 import './TeamMember.css'
 import PracticCard from './PracticCard/PracticCard';
 
 
-
+moment.locale('ru')
 
 
 function TeamMember(props) {
@@ -20,23 +22,23 @@ function TeamMember(props) {
 
   const [isButtonClicked, setButtonClicked] = React.useState(false);
 
-  const [dateNow, setDateNow] = React.useState('');
-  const [dayNow, setDayNow] = React.useState('');
-  const [dayNumberNow, setDayNumbeNow] = React.useState('');
+  // const [dateNow, setDateNow] = React.useState('');
+  // const [dayNow, setDayNow] = React.useState('');
+  // const [dayNumberNow, setDayNumbeNow] = React.useState('');
 
 
 
-  React.useEffect(() => {
-    var date = moment()
-    moment.locale('ru')
-    setDayNow(date.tz("Europe/Moscow").format('dd'))
-    setDayNumbeNow(date.tz("Europe/Moscow").format('D'))
-    setDateNow(date.tz("Europe/Moscow").format('D.MM.YYYY'))
-  }, []);
+  // React.useEffect(() => {
+  //   var date = moment()
+  //   moment.locale('ru')
+  //   setDayNow(date.tz("Europe/Moscow").format('dd'))
+  //   setDayNumbeNow(date.tz("Europe/Moscow").format('D'))
+  //   setDateNow(date.tz("Europe/Moscow").format('D.MM.YYYY'))
+  // }, []);
 
-  React.useEffect(() => {
-    console.log(dayNow, dateNow, dayNumberNow)
-  }, [dateNow, dayNow, dayNumberNow]);
+  // React.useEffect(() => {
+  //   console.log(dayNow, dateNow, dayNumberNow)
+  // }, [dateNow, dayNow, dayNumberNow]);
 
   React.useEffect(() => {
 
@@ -47,6 +49,61 @@ function TeamMember(props) {
     if (member.length === 1) setMember(member[0])
     else setMember(null)
   }, [props.team, name])
+
+
+  const [timeTable, setTimeTable] = React.useState([]);
+
+  React.useEffect(() => {
+
+    if (member) {
+      let formatedTimeTable = []
+      if (props.timeTable) {
+
+        props.timeTable.forEach(item => {
+          // console.log(item)
+          if (item.staff.name.toLowerCase().trim() === member.name.toLowerCase().trim() && formatedTimeTable.length > 0 && formatedTimeTable.filter((elem) => {
+            if (elem.date === item.date.split(' ')[0]) return true
+            else return false
+          }).length === 1) {
+            formatedTimeTable = formatedTimeTable.map((elem) => {
+              if (elem.date === item.date.split(' ')[0]) {
+                return {
+                  date: elem.date,
+                  items: [
+                    ...elem.items,
+                    item
+                  ]
+                }
+              } return {
+                date: elem.date,
+                items: elem.items,
+              }
+            })
+          }
+
+          else if (item.staff.name.toLowerCase().trim() === member.name.toLowerCase().trim() && (formatedTimeTable.length === 0 || formatedTimeTable.filter((elem) => {
+            if (elem.date === item.date.split(' ')[0]) return true
+            else return false
+          }).length === 0)) {
+            console.log('d')
+            formatedTimeTable = [...formatedTimeTable, {
+              date: item.date.split(' ')[0],
+              items: [
+                item
+              ]
+            }]
+          }
+
+        });
+
+        setTimeTable(formatedTimeTable.slice(0, 9))
+      }
+
+    }
+
+  }, [props.timeTable, member]);
+
+
 
   return (
     <div className="team-member">
@@ -110,15 +167,34 @@ function TeamMember(props) {
           </p>
         </> :
         <></>}
-      <div className="team-member__date">
-        <p className="team-member__date-day-name">{dayNow}</p>
-        <p className="team-member__date-day-number">{dayNumberNow}</p>
-      </div>
-      <div className="team-member__practic-cards">
-        <PracticCard dateNow={dateNow} name={member ? member.name : undefined}/>
-        <PracticCard dateNow={dateNow} name={member ? member.name : undefined}/>
-        <PracticCard dateNow={dateNow} name={member ? member.name : undefined}/>
-      </div>
+      {timeTable.length !== 0 ? timeTable.map((item_by_dates, i) => (
+        <>
+          <div className="team-member__date">
+            <p className="team-member__date-day-name">{moment(item_by_dates.date).format('dd')}</p>
+            <p className="team-member__date-day-number">{moment(item_by_dates.date).format('D')}</p>
+          </div>
+          <div className="team-member__practic-cards">
+            {
+              item_by_dates.items ? item_by_dates.items.map((item, i) => (
+                <PracticCard service={{
+                  name: item.service.title,
+                  duration: Math.floor(item.length / 60),
+                  price: item.service.price_min,
+                  img_link: item.service.image_url,
+                  short_desc: item.service.comment.trim().split('/')[0] ? item.service.comment.trim().split('/')[0] : 'Нет описания',
+                  desc: item.service.comment.trim().split('/')[1] ? item.service.comment.trim().split('/')[1] : 'Нет описания',
+                  link: item.link,
+                  capacity: `${item.capacity - item.records_count} из ${item.capacity}`,
+                }} date={`${item.date.split(' ')[0].split('-')[2]}.${item.date.split(' ')[0].split('-')[1]}.${item.date.split(' ')[0].split('-')[0]} / ${item.date.split(' ')[1].split(':')[0]}:${item.date.split(' ')[1].split(':')[1]} `} name={item.staff.name} />
+
+              )) :
+                <></>
+            }
+
+          </div>
+        </>
+      )) : <><p className='team-member__no-practic-cards'>Сеансы недоступны для записи</p></>}
+
 
     </div>
   );

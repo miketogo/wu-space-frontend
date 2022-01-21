@@ -23,6 +23,7 @@ function ServicePopup(props) {
 
   React.useEffect(() => {
     if(props.selectedService !== null){
+      console.log(props.selectedService)
       setSelectedService(props.selectedService)
     }
    
@@ -37,9 +38,9 @@ function ServicePopup(props) {
           <h2 className='service-popup__name'>{selectedService !== null ? selectedService.name : ''}</h2>
           <p className='service-popup__desc'>{selectedService !== null ? selectedService.desc : ''}</p>
           <div className='service-popup__btns'>
-            <div className='service-popup__btn-sign-up'>
+            <a href={selectedService !== null ? selectedService.link : ''} className='service-popup__btn-sign-up'>
               <p className='service-popup__btn-sign-up-text'>Записаться на занятие</p>
-            </div>
+            </a>
             <div className='service-popup__btn-close'>
               <p className='service-popup__btn-close-text' onClick={handleClose}>Закрыть</p>
             </div>

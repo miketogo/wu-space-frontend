@@ -1,7 +1,12 @@
 .service-card {
   position: relative;
   height: 456px;
-  margin: 20px 0 0;
+  transition: margin 0.7s ease-in-out;
+  margin: -456px 0 0;
+}
+
+.service-card_loaded {
+  margin: 60px 0 0;
 }
 
 .service-card:first-of-type {
@@ -10,6 +15,7 @@
 
 .service-card__img {
   position: absolute;
+  object-fit: cover;
   width: 288px;
   height: 326px;
   z-index: 1;
@@ -20,6 +26,24 @@
   z-index: 2;
   top: -38px;
   left: 43px;
+  margin: 0;
+  font-family: Comfortaa;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+
+  color: #FFFFFF;
+
+}
+
+.service-card__capacity{
+  position: absolute;
+  z-index: 2;
+  top: -38px;
+  right: 0;
   margin: 0;
   font-family: Comfortaa;
   font-style: normal;
@@ -49,9 +73,8 @@
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 40px;
-  text-align: center;
   width: fit-content;
   color: #FFFFFF;
   margin: 0;
@@ -64,7 +87,7 @@
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 27px;
 
   color: #FFFFFF;
@@ -118,6 +141,11 @@
   min-width: 81px;
 }
 
+.service-card__info-data_time {
+  min-width: 71px;
+}
+
+
 .service-card__info-data-icon {
   margin: 0;
   width: 24px;
@@ -142,6 +170,7 @@
 
 
 .service-card__btn {
+  text-decoration: none;
   cursor: pointer;
   position: absolute;
   bottom: calc(-18px - 24px - 38px);
@@ -158,6 +187,7 @@
 }
 
 .service-card__btn-text {
+  text-decoration: none;
   transition: color 0.3s ease-in-out;
   font-family: Comfortaa;
   font-style: normal;
@@ -171,10 +201,11 @@
   margin: 0;
 }
 
-.service-card__btn:hover{
+.service-card__btn:hover {
   background-color: rgba(255, 255, 255, 1);
 }
-.service-card__btn:hover .service-card__btn-text{
+
+.service-card__btn:hover .service-card__btn-text {
   color: #48481C;
 }
 
@@ -199,7 +230,7 @@
   bottom: 13px;
 }
 
-.service-card__more:hover{
+.service-card__more:hover {
   color: #CACACA;
 }
 
@@ -242,7 +273,18 @@
     line-height: 28px;
 
   }
+  .service-card__capacity{
 
+    position: relative;
+    top: unset;
+    left: unset;
+    margin: 10px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+  
+  }
   .service-card__info-item {
     width: 50%;
   }
@@ -321,6 +363,18 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
+  }
+  .service-card__capacity{
+
+    position: relative;
+    top: unset;
+    left: unset;
+    margin: 5px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+  
   }
 
   .service-card__name {

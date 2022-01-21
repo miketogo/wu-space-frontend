@@ -41,6 +41,7 @@
   opacity: 0;
   visibility: hidden;
   transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  overflow-y: scroll;
 }
 
 
@@ -66,7 +67,7 @@
   padding: 0 0 30px 0;
   z-index: 10001;
   width: 770px;
-  min-height: 644px;
+  /* min-height: 644px; */
   position: relative;
   background: #7A7A7A;
   display: flex;
@@ -94,15 +95,16 @@
 
 .service-popup__img {
   width: 770px;
-  height: 312px;
+  height: 212px;
+  object-fit: cover;
 }
 
 .service-popup__name {
-  font-family: Comfortaa;
+  font-family: Inter;
   font-style: normal;
   font-weight: 300;
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 30px;
+  line-height: 130%;
 
   color: #FFFFFF;
   width: calc(100% - 20px * 2);
@@ -110,10 +112,11 @@
 }
 
 .service-popup__desc {
+  font-family: Inter;
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 29px;
+  font-size: 18px;
+  line-height: 22px;
 
   color: #FFFFFF;
   width: calc(100% - 20px * 2);
@@ -130,6 +133,7 @@
 }
 
 .service-popup__btn-sign-up {
+  text-decoration: none;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -147,6 +151,7 @@
 }
 
 .service-popup__btn-sign-up-text {
+  text-decoration: none;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -201,6 +206,9 @@
 }
 
 @media (max-width: 590px) {
+  .service-popup__img{
+    height: 151px;
+  }
   .service-popup__container {
     width: 95%;
   }
@@ -208,8 +216,9 @@
   .service-popup__name {
     font-style: normal;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 22px;
+    font-size: 18px;
+    line-height: 20px;
+    width: calc(100% - 12px * 2);
   }
 
   .service-popup__desc {
@@ -217,14 +226,17 @@
     font-weight: 300;
     font-size: 12px;
     line-height: 15px;
+    width: calc(100% - 12px * 2);
   }
 
   .service-popup__btns {
+    width: calc(100% - 12px * 2);
+    margin: 20px auto 0;
     flex-direction: column;
   }
 
   .service-popup__btn-sign-up {
-    padding: 16px 0;
+    padding: 11px 0;
     width: 100%;
   }
 

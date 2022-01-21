@@ -37,7 +37,7 @@ const first_row = [
     practics: 'Абонемент действует для всех видов базовых и авторских практик всех мастеров WU-space',
     bonus: 'Одно бесплатное посещение любой практики WU-special',
     type: 1,
-    link: 'https://o1411.yclients.com/loyalty/subscription/332383/form',
+    link: 'https://o1411.yclients.com/loyalty/subscription/332627/form',
   },
 ]
 
@@ -51,6 +51,7 @@ const second_row = [
     practics: 'Хатха-йога, sleeping beauty, energy shot, йога-нидра, аштанга-йога, акро-йога, кундалини-йога',
     bonus: 'Одно бесплатное посещение любой практики WU-special + одно бесплатное посещение любой базовой или авторской практики для друга',
     type: 1,
+    link: 'https://o1411.yclients.com/loyalty/subscription/332632/form',
   },
   {
     name: 'WU premium',
@@ -62,6 +63,7 @@ const second_row = [
     more_practics: 'Практики WU-special - Гвоздетерапия, Шаманское Дыхание, Звуковая медитация, Шаманское Путешествие, Ракета Желаний, Гонг+Рапе.',
     bonus: 'Одно бесплатное посещение любой практики WU-special + два бесплатных посещения любой базовой или авторской практики для друга',
     type: 2,
+    link: 'https://o1411.yclients.com/loyalty/subscription/332634/form',
   },
   {
     name: 'Базовая практика',
@@ -72,6 +74,7 @@ const second_row = [
     practics: 'Любая базовая практика при первом посещении WU-space. Soft benefits - чай, полезные угощения, пространство для релаксации и общения после практики.',
     bonus: '',
     type: 4,
+    link: 'https://o1411.yclients.com/loyalty/subscription/332842/form',
   },
 ]
 
@@ -98,7 +101,7 @@ function Membership(props) {
             <p className="membership__card-practics">{card.practics}</p>
             <p className="membership__card-bonus">{card.bonus}</p>
             <span className="membership__card-btn-plug"></span>
-            <a target="_blank" rel="noreferrer" href={card.link} className="membership__card-btn">
+            <a href={card.link} className="membership__card-btn">
               <p className="membership__card-btn-text">Приобрести</p>
             </a>
           </div>
@@ -145,9 +148,9 @@ function Membership(props) {
               :
               <></>}
             <span className="membership__card-btn-plug"></span>
-            <div className="membership__card-btn">
+            <a href={card.link} className="membership__card-btn">
               <p className="membership__card-btn-text">Приобрести</p>
-            </div>
+            </a>
           </div>
         ))}
 

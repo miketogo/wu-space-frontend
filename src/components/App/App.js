@@ -30,6 +30,7 @@ import alexander_ryshkov_video from '../../assets/videos/team/alexander-ryshkov.
 import tatiyana_treshchalova_video from '../../assets/videos/team/tatiyana-treshchalova.mp4'
 import ulyana_sotnikova_video from '../../assets/videos/team/ulyana-sotnikova.mp4'
 import Services from '../Services/Services';
+import mainApi from '../../assets/utils/MainApi';
 
 const team = [
   {
@@ -182,6 +183,23 @@ function App() {
       window.removeEventListener('resize', handleResize);
     };
   });
+
+  const [timeTable, setTimeTable] = React.useState([]);
+
+
+  React.useEffect(() => {
+    mainApi.getTimeTable()
+    .then((res)=>{
+      res.data.forEach(item => {
+        item.link = `https://n690156.yclients.com/company:${item.company_id}/activity-info:${item.id}:${item.staff.id}`
+      });
+      setTimeTable(res.data)
+    })
+    .catch((err)=>{
+      console.log(err)
+    })
+  }, []);
+
   return (
     <>
       <div className="app" >
@@ -198,10 +216,10 @@ function App() {
             <Team team={team} />
           </Route>
           <Route path="/services">
-            <Services />
+            <Services timeTable={timeTable}/>
           </Route>
           <Route path="/provodniki/:name">
-            <TeamMember team={team} />
+            <TeamMember timeTable={timeTable} team={team} />
           </Route>
         </Switch>
         <Footer screenWidth={screenWidth} />
@@ -209,6 +227,7 @@ function App() {
       <div className='app__bg'>
 
       </div>
+
     </>
   );
 }

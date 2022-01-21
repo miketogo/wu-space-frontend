@@ -71,7 +71,7 @@
   width: calc(100% - 310px);
   position: relative;
   z-index: 2;
-  height: 715px;
+  height: 599px;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -167,7 +167,7 @@
     padding: 92px 17px 60px 41px;
   }
   .about-space__image-fade {
-    height: 641px;
+    height: 484px;
     width: calc(100% - 202px);
   }
 }
@@ -183,7 +183,7 @@
     padding: 55px 32px 50px 20px;
   }
   .about-space__image-fade {
-    height: 498px;
+    height: 484px;
     width: 100%;
     margin: 0;
   }
@@ -223,11 +223,14 @@
     font-size: 12px;
     line-height: 20px;
   }
+  .about-space__image-fade {
+    height: 331px;
+  }
 }
 
 @media (max-width: 588px) {
   .about-space__image-fade {
-    height: 260px;
+    height: 200px;
   }
   .about-space {
     padding: 108px 8px 0;
