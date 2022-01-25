@@ -223,7 +223,7 @@ function Services(props) {
                 {types.map((item, i) => (
                   <>
                     {selectedType !== item ?
-                      <p key={`selectedType-${i}-${item}`} className={`services__filter-dropdown-item 
+                      <p key={`selectedType-${i}-${item}`} className={`services__filter-dropdown-item
                       ${selectedTrainer !== 'Любой' && item !== 'Все' && trainers.filter((trainer) => {
                         if (trainer.name === selectedTrainer) return true
                         else return false
@@ -266,7 +266,7 @@ function Services(props) {
                 {trainers.map((item, i) => (
                   <>
                     {selectedTrainer !== item.name ?
-                      <p key={`selectedType-${i}-${item.name}`} className={`services__filter-dropdown-item 
+                      <p key={`selectedType-${i}-${item.name}`} className={`services__filter-dropdown-item
                       ${selectedType !== 'Все' && item.name !== 'Любой' && item.types.indexOf(selectedType) === -1 ? 'services__filter-dropdown-item_inactive' : ''}
                       `} onClick={() => {
                           if (selectedType !== 'Все' && item.name !== 'Любой' && item.types.indexOf(selectedType) === -1) {

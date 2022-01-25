@@ -16,7 +16,7 @@ function PracticCard(props) {
       }, 10);
 
     }
-   
+
   }, [props.service]);
 
   return (
@@ -74,7 +74,7 @@ function PracticCard(props) {
           </div>
         </div>
         <p className="service-card__more" onClick={() => {
-          props.setSelectedService(props.service)
+          props.setSelectedService({ service: props.service, img: props.service.img_link !== ''? `${props.service.img_link}` :test_img})
         }}>Подробнее</p>
         <a className="service-card__btn" href={props.service.link}>
           <p className="service-card__btn-text">Записаться</p>
