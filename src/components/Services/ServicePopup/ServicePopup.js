@@ -26,7 +26,7 @@ function ServicePopup(props) {
       console.log(props.selectedService)
       setSelectedService(props.selectedService)
     }
-   
+
   }, [props.selectedService]);
 
 
@@ -34,11 +34,11 @@ function ServicePopup(props) {
     <>
       <div className={`service-popup ${props.selectedService !== null ? 'service-popup_active' : ''}`}>
         <div className={`service-popup__container `} >
-          <img className='service-popup__img' src={testImg} alt={selectedService !== null ? selectedService.name : ''} />
-          <h2 className='service-popup__name'>{selectedService !== null ? selectedService.name : ''}</h2>
-          <p className='service-popup__desc'>{selectedService !== null ? selectedService.desc : ''}</p>
+          <img className='service-popup__img' src={selectedService ? selectedService.img : testImg} alt={selectedService !== null ? selectedService.service.name : ''} />
+          <h2 className='service-popup__name'>{selectedService!== null ? selectedService.service.name : ''}</h2>
+          <p className='service-popup__desc'>{selectedService !== null ? selectedService.service.desc : ''}</p>
           <div className='service-popup__btns'>
-            <a href={selectedService !== null ? selectedService.link : ''} className='service-popup__btn-sign-up'>
+            <a href={selectedService !== null ? selectedService.service.link : ''} className='service-popup__btn-sign-up'>
               <p className='service-popup__btn-sign-up-text'>Записаться на занятие</p>
             </a>
             <div className='service-popup__btn-close'>

@@ -16,7 +16,7 @@ function PracticCard(props) {
       }, 10);
 
     }
-   
+
   }, [props.service]);
 
   return (
