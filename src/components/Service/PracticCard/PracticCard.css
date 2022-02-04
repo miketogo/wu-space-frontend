@@ -1,19 +1,14 @@
-.service-card {
+.practic-card {
   position: relative;
   height: 456px;
-  transition: margin 0.7s ease-in-out;
-  margin: -456px 0 0;
+  margin: 97px 0 0;
 }
 
-.service-card_loaded {
-  margin: 60px 0 0;
-}
-
-.service-card:first-of-type {
+.practic-card:first-of-type {
   margin: 0;
 }
 
-.service-card__img {
+.practic-card__img {
   position: absolute;
   object-fit: cover;
   width: 288px;
@@ -21,7 +16,7 @@
   z-index: 1;
 }
 
-.service-card__date {
+.practic-card__date {
   position: absolute;
   z-index: 2;
   top: -38px;
@@ -39,7 +34,7 @@
 
 }
 
-.service-card__capacity {
+.practic-card__capacity {
   position: absolute;
   z-index: 2;
   top: -38px;
@@ -57,19 +52,19 @@
 
 }
 
-.service-card__texts {
+.practic-card__texts {
   width: fit-content;
   position: absolute;
   top: 123px;
   left: 255px;
-  background: #C57642;
+  background: #81816C;
   z-index: 2;
-  max-width: calc(100% - 255px - 25px - 22px);
-  padding: 28px 25px 18px 22px;
+  max-width: calc(100% - 255px - 57px - 22px);
+  padding: 28px 57px 18px 22px;
 }
 
 
-.service-card__name {
+.practic-card__name {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -81,7 +76,7 @@
 }
 
 
-.service-card__desc {
+.practic-card__desc {
   margin: 16px 0 27px;
 
   font-family: Comfortaa;
@@ -95,24 +90,24 @@
 }
 
 
-.service-card__info {
+.practic-card__info {
   display: flex;
   flex-direction: row;
   margin: 16px 0 0;
 }
 
-.service-card__info-item {
+.practic-card__info-item {
   display: flex;
   flex-direction: column;
-  margin: 0 12px 0 0;
+  margin: 0 32px 0 0;
 }
 
-.service-card__info-item:last-of-type {
+.practic-card__info-item:last-of-type {
   margin: 0;
 }
 
 
-.service-card__info-item-name {
+.practic-card__info-item-name {
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -127,35 +122,21 @@
 }
 
 
-.service-card__info-data {
-  text-decoration: none;
+.practic-card__info-data {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 12px;
-  margin: 0 0 0;
-  border: 1px solid rgba(255, 255, 255, 0.6);
-
-}
-
-.service-card__info-data_price {
-  min-width: 81px;
-}
-
-.service-card__info-data_time {
-  min-width: 71px;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px 0 0;
 }
 
 
-.service-card__info-data-icon {
+.practic-card__info-data-icon {
+  margin: 0 4px 0 0;
+}
+
+
+.practic-card__info-data-text {
   margin: 0;
-  width: 24px;
-  height: 24px;
-}
-
-
-.service-card__info-data-text {
-  margin: 24px 0 0;
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -163,21 +144,21 @@
   line-height: 27px;
   /* identical to box height */
 
-  text-decoration: none;
+
   color: #FFFFFF;
 
 
 }
 
 
-.service-card__btn {
+.practic-card__btn {
   text-decoration: none;
   cursor: pointer;
   position: absolute;
   bottom: calc(-18px - 24px - 38px);
   right: 0;
   border: 2px solid #FFFFFF;
-  background-color: rgba(255, 255, 255, 0);
+
   border-radius: 50px;
   display: flex;
   flex-direction: row;
@@ -187,9 +168,8 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-.service-card__btn-text {
+.practic-card__btn-text {
   text-decoration: none;
-  transition: color 0.3s ease-in-out;
   font-family: Comfortaa;
   font-style: normal;
   font-weight: normal;
@@ -197,58 +177,27 @@
   line-height: 28px;
   /* identical to box height, or 140% */
 
-
-  color: #FFFFFF;
-  margin: 0;
-}
-
-.service-card__btn:hover {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.service-card__btn:hover .service-card__btn-text {
-  color: #48481C;
-}
-
-.service-card__info__tow-first {
-  display: flex;
-  flex-direction: row;
-  margin: 0 12px 0 0;
-}
-
-.service-card__more {
-  display: block;
-  cursor: pointer;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 28px;
-  text-decoration-line: underline;
   transition: color 0.3s ease-in-out;
   color: #FFFFFF;
   margin: 0;
-  position: absolute;
-  right: 21px;
-  bottom: 13px;
 }
 
-.service-card__more:hover {
-  color: #CACACA;
+.practic-card__info__tow-first {
+  display: flex;
+  flex-direction: row;
+  margin: 0 32px 0 0;
 }
 
+.practic-card__btn:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
 
-@media (max-width: 1200px) {
-  .service-card__more {
-    margin: 12px 0 0;
-    text-align: right;
-    position: relative;
-    right: unset;
-    bottom: unset;
-  }
+.practic-card__btn:hover .practic-card__btn-text {
+  color: #48481C;
 }
 
 @media (max-width: 1034px) {
-  .service-card {
+  .practic-card {
     position: relative;
     height: fit-content;
     margin: 50px 0 0;
@@ -256,7 +205,7 @@
     flex-direction: column;
   }
 
-  .service-card__img {
+  .practic-card__img {
     position: relative;
     width: 100%;
     height: 377px;
@@ -264,7 +213,7 @@
     object-fit: cover;
   }
 
-  .service-card__date {
+  .practic-card__date {
     position: relative;
     top: unset;
     left: unset;
@@ -276,7 +225,7 @@
 
   }
 
-  .service-card__capacity {
+  .practic-card__capacity {
 
     position: relative;
     top: unset;
@@ -289,15 +238,7 @@
 
   }
 
-  .service-card__info-item {
-    width: 50%;
-  }
-
-  .service-card__info-item_last {
-    width: 100%;
-  }
-
-  .service-card__texts {
+  .practic-card__texts {
     width: 100%;
     position: relative;
     top: unset;
@@ -306,7 +247,7 @@
     padding: 30px 20px 20px 20px;
   }
 
-  .service-card__name {
+  .practic-card__name {
     font-style: normal;
     font-weight: normal;
     font-size: 32px;
@@ -314,7 +255,7 @@
     margin: 19px 0 0;
   }
 
-  .service-card__desc {
+  .practic-card__desc {
     margin: 20px 0;
 
     font-style: normal;
@@ -323,53 +264,48 @@
     line-height: 20px;
   }
 
-  .service-card__info {
+  .practic-card__info {
     flex-direction: column;
     margin: 5px 0 0;
   }
 
-  .service-card__info__tow-first {
+  .practic-card__info__tow-first {
     margin: 0 0 22px 0;
 
   }
 
-  .service-card__btn {
+  .practic-card__btn {
     position: relative;
     bottom: unset;
     right: unset;
     padding: 16px 0;
     width: 100%;
-    margin: 24px 0 0;
-  }
-
-  .service-card__more {
     margin: 48px 0 0;
-    text-align: center;
   }
 }
 
 @media (max-width: 590px) {
-  .service-card {
+  .practic-card {
     margin: 44px 0 0;
   }
 
-  .service-card__img {
+  .practic-card__img {
     height: 208px;
   }
 
-  .service-card__texts {
+  .practic-card__texts {
     max-width: calc(100% - 8px - 8px);
     padding: 14px 8px 12px 8px;
   }
 
-  .service-card__date {
+  .practic-card__date {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 28px;
   }
 
-  .service-card__capacity {
+  .practic-card__capacity {
 
     position: relative;
     top: unset;
@@ -382,7 +318,7 @@
 
   }
 
-  .service-card__name {
+  .practic-card__name {
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -390,7 +326,7 @@
     margin: 24px 0 0;
   }
 
-  .service-card__desc {
+  .practic-card__desc {
     margin: 8px 0;
     font-style: normal;
     font-weight: normal;
@@ -398,60 +334,44 @@
     line-height: 18px;
   }
 
-  .service-card__info {
+  .practic-card__info {
     margin: 16px 0 0;
   }
 
-  .service-card__info-item-name {
+  .practic-card__info-item-name {
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
     line-height: 20px;
   }
 
-  .service-card__info-data {
+  .practic-card__info-data {
     margin: 4px 0 0;
-    align-items: flex-start;
+    align-items: center;
   }
 
 
-  .service-card__info-data-icon {
-    width: 16px;
-    height: 16px;
+  .practic-card__info-data-icon {
+    width: 20px;
+    height: 20px;
   }
 
 
-  .service-card__info-data-text {
+  .practic-card__info-data-text {
     font-style: normal;
     font-weight: normal;
-    font-size: 16px;
-    line-height: 100%;
-    margin: 16px 0 0;
+    font-size: 20px;
+    line-height: 22px;
   }
 
-  .service-card__info__tow-first {
+  .practic-card__info__tow-first {
     margin: 0 0 18px 0;
 
   }
 
-  .service-card__btn {
+  .practic-card__btn {
     padding: 12px 0;
     margin: 16px 0 0;
   }
 
-  .service-card__btn-text {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 28px;
-  }
-
-  .service-card__more {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 100%;
-    margin: 32px 0 0;
-    text-align: center;
-  }
 }

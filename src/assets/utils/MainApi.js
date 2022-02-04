@@ -15,6 +15,33 @@ class MainApi {
     }).then(this._checkResponse)
   };
 
+  getServices() {
+    return fetch(`${this._BASE_URL}/yaclients/services`, {
+      method: 'GET',
+      credentials: 'include',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+    }).then(this._checkResponse)
+  };
+
+  getStaff({ staff_id }) {
+    console.log(staff_id)
+    return fetch(`${this._BASE_URL}/yaclients/staff`, {
+      method: 'POST',
+      credentials: 'include',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        "staff_id": staff_id,
+      }
+      )
+    }).then(this._checkResponse)
+  };
+
 
   _checkResponse(res) {
     if (res.ok) {

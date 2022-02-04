@@ -31,6 +31,7 @@ import tatiyana_treshchalova_video from '../../assets/videos/team/tatiyana-tresh
 import ulyana_sotnikova_video from '../../assets/videos/team/ulyana-sotnikova.mp4'
 import Services from '../Services/Services';
 import mainApi from '../../assets/utils/MainApi';
+import Service from '../Service/Service';
 
 const team = [
   {
@@ -161,6 +162,10 @@ function App() {
   }, { passive: false })
 
 
+  // React.useEffect(() => {
+   
+  // }, []);
+
 
 
 
@@ -184,20 +189,23 @@ function App() {
     };
   });
 
-  const [timeTable, setTimeTable] = React.useState([]);
+  const [timeTable, setTimeTable] = React.useState(undefined);
 
+  // const [services, setServices] = React.useState([]);
 
   React.useEffect(() => {
+   
+
     mainApi.getTimeTable()
-    .then((res)=>{
-      res.data.forEach(item => {
-        item.link = `https://n690156.yclients.com/company:${item.company_id}/activity-info:${item.id}:${item.staff.id}`
-      });
-      setTimeTable(res.data)
-    })
-    .catch((err)=>{
-      console.log(err)
-    })
+      .then((res) => {
+        res.data.forEach(item => {
+          item.link = `https://n690156.yclients.com/company:${item.company_id}/activity-info:${item.id}:${item.staff.id}`
+        });
+        setTimeTable(res.data)
+      })
+      .catch((err) => {
+        console.log(err)
+      })
   }, []);
 
   return (
@@ -215,8 +223,11 @@ function App() {
           <Route exact path="/provodniki">
             <Team team={team} />
           </Route>
+          <Route path="/services/:id">
+            <Service timeTable={timeTable} />
+          </Route>
           <Route path="/services">
-            <Services timeTable={timeTable}/>
+            <Services timeTable={timeTable} />
           </Route>
           <Route path="/provodniki/:name">
             <TeamMember timeTable={timeTable} team={team} />

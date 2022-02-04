@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, useParams, useHistory } from 'react-router-dom';
+import {  useParams, useHistory } from 'react-router-dom';
 import moment from 'moment-timezone';
 import 'moment/locale/ru'
 
@@ -9,6 +9,7 @@ import ReactPlayer from 'react-player'
 
 import './TeamMember.css'
 import PracticCard from './PracticCard/PracticCard';
+import Preloader from '../../Preloader/Preloader';
 
 
 moment.locale('ru')
@@ -51,54 +52,57 @@ function TeamMember(props) {
     else setMember(null)
   }, [props.team, name])
 
-
+  const [isPreloaderVisible, setPreloaderVisible] = React.useState(true);
   const [timeTable, setTimeTable] = React.useState([]);
 
   React.useEffect(() => {
+    setPreloaderVisible(true)
+    if (member && props.timeTable) {
 
-    if (member) {
       let formatedTimeTable = []
-      if (props.timeTable) {
 
-        props.timeTable.forEach(item => {
-          // console.log(item)
-          if (item.staff.name.toLowerCase().trim() === member.name.toLowerCase().trim() && formatedTimeTable.length > 0 && formatedTimeTable.filter((elem) => {
-            if (elem.date === item.date.split(' ')[0]) return true
-            else return false
-          }).length === 1) {
-            formatedTimeTable = formatedTimeTable.map((elem) => {
-              if (elem.date === item.date.split(' ')[0]) {
-                return {
-                  date: elem.date,
-                  items: [
-                    ...elem.items,
-                    item
-                  ]
-                }
-              } return {
+      props.timeTable.forEach(item => {
+        // console.log(item)
+        if (item.staff.name.toLowerCase().trim() === member.name.toLowerCase().trim() && formatedTimeTable.length > 0 && formatedTimeTable.filter((elem) => {
+          if (elem.date === item.date.split(' ')[0]) return true
+          else return false
+        }).length === 1) {
+          formatedTimeTable = formatedTimeTable.map((elem) => {
+            if (elem.date === item.date.split(' ')[0]) {
+              return {
                 date: elem.date,
-                items: elem.items,
+                items: [
+                  ...elem.items,
+                  item
+                ]
               }
-            })
-          }
+            } return {
+              date: elem.date,
+              items: elem.items,
+            }
+          })
+        }
 
-          else if (item.staff.name.toLowerCase().trim() === member.name.toLowerCase().trim() && (formatedTimeTable.length === 0 || formatedTimeTable.filter((elem) => {
-            if (elem.date === item.date.split(' ')[0]) return true
-            else return false
-          }).length === 0)) {
-            console.log('d')
-            formatedTimeTable = [...formatedTimeTable, {
-              date: item.date.split(' ')[0],
-              items: [
-                item
-              ]
-            }]
-          }
+        else if (item.staff.name.toLowerCase().trim() === member.name.toLowerCase().trim() && (formatedTimeTable.length === 0 || formatedTimeTable.filter((elem) => {
+          if (elem.date === item.date.split(' ')[0]) return true
+          else return false
+        }).length === 0)) {
+          console.log('d')
+          formatedTimeTable = [...formatedTimeTable, {
+            date: item.date.split(' ')[0],
+            items: [
+              item
+            ]
+          }]
+        }
 
-        });
+      });
 
-        setTimeTable(formatedTimeTable.slice(0, 9))
-      }
+      setTimeTable(formatedTimeTable.slice(0, 9))
+
+      setTimeout(() => {
+        setPreloaderVisible(false)
+      }, 300);
 
     }
 
@@ -108,11 +112,12 @@ function TeamMember(props) {
 
   return (
     <div className="team-member">
+
       <div className="team-member__heading" onClick={() => history.goBack()}>
         <svg className="team-member__arrow" width="136" height="30" viewBox="0 0 136 30" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0.585785 13.5858C-0.195267 14.3668 -0.195267 15.6332 0.585785 16.4142L13.3137 29.1421C14.0948 29.9232 15.3611 29.9232 16.1421 29.1421C16.9232 28.3611 16.9232 27.0948 16.1421 26.3137L4.82843 15L16.1421 3.68629C16.9232 2.90524 16.9232 1.63891 16.1421 0.857864C15.3611 0.0768156 14.0948 0.0768156 13.3137 0.857864L0.585785 13.5858ZM136 13L2 13V17L136 17V13Z" fill="white" />
         </svg>
-        <h2 className="team-member__title">{/[а-яё]/i.test(name)? 'Вернутся' : 'Вернутся к проводникам'}</h2>
+        <h2 className="team-member__title">{/[а-яё]/i.test(name) ? 'Вернутся' : 'Вернутся к проводникам'}</h2>
       </div>
       {member ?
         <>
@@ -168,34 +173,39 @@ function TeamMember(props) {
           </p>
         </> :
         <></>}
-      {timeTable.length !== 0 ? timeTable.map((item_by_dates, i) => (
+
+      {!isPreloaderVisible ?
         <>
-          <div className="team-member__date">
-            <p className="team-member__date-day-name">{moment(item_by_dates.date).format('dd')}</p>
-            <p className="team-member__date-day-number">{moment(item_by_dates.date).format('D')}</p>
-          </div>
-          <div className="team-member__practic-cards">
-            {
-              item_by_dates.items ? item_by_dates.items.map((item, i) => (
-                <PracticCard service={{
-                  name: item.service.title,
-                  duration: Math.floor(item.length / 60),
-                  price: item.service.price_min,
-                  img_link: item.service.image_url,
-                  short_desc: item.service.comment.trim().split('/')[0] ? item.service.comment.trim().split('/')[0] : 'Нет описания',
-                  desc: item.service.comment.trim().split('/')[1] ? item.service.comment.trim().split('/')[1] : 'Нет описания',
-                  link: item.link,
-                  capacity: `${item.capacity - item.records_count} из ${item.capacity}`,
-                }} date={`${item.date.split(' ')[0].split('-')[2]}.${item.date.split(' ')[0].split('-')[1]}.${item.date.split(' ')[0].split('-')[0]} / ${item.date.split(' ')[1].split(':')[0]}:${item.date.split(' ')[1].split(':')[1]} `} name={item.staff.name} />
+          {timeTable.length !== 0 ? timeTable.map((item_by_dates, i) => (
+            <>
+              <div className="team-member__date">
+                <p className="team-member__date-day-name">{moment(item_by_dates.date).format('dd')}</p>
+                <p className="team-member__date-day-number">{moment(item_by_dates.date).format('D')}</p>
+              </div>
+              <div className="team-member__practic-cards">
+                {
+                  item_by_dates.items ? item_by_dates.items.map((item, i) => (
+                    <PracticCard service={{
+                      name: item.service.title,
+                      duration: Math.floor(item.length / 60),
+                      price: item.service.price_min,
+                      img_link: item.service.image_url,
+                      short_desc: item.service.comment.trim().split('/')[0] ? item.service.comment.trim().split('/')[0] : 'Нет описания',
+                      desc: item.service.comment.trim().split('/')[1] ? item.service.comment.trim().split('/')[1] : 'Нет описания',
+                      link: item.link,
+                      capacity: `${item.capacity - item.records_count} из ${item.capacity}`,
+                    }} date={`${item.date.split(' ')[0].split('-')[2]}.${item.date.split(' ')[0].split('-')[1]}.${item.date.split(' ')[0].split('-')[0]} / ${item.date.split(' ')[1].split(':')[0]}:${item.date.split(' ')[1].split(':')[1]} `} name={item.staff.name} />
 
-              )) :
-                <></>
-            }
+                  )) :
+                    <></>
+                }
 
-          </div>
+              </div>
+            </>
+          )) : <><p className='team-member__no-practic-cards'>Нет сеансов доступных для записи</p></>}
         </>
-      )) : <><p className='team-member__no-practic-cards'>Нет сеансов доступных для записи</p></>}
-
+        :
+        <Preloader />}
 
     </div>
   );
