@@ -20,7 +20,7 @@ function MenuPopup(props) {
             Главная
           </NavLink>
           <NavLink to="/services" className="menu-popup__link" activeClassName="menu-popup__link_active" onClick={props.handleMenuCloseClick}>
-            Услуги
+            Практики
           </NavLink>
           <NavLink to="/provodniki" className="menu-popup__link" activeClassName="menu-popup__link_active" onClick={props.handleMenuCloseClick}>
             проводники

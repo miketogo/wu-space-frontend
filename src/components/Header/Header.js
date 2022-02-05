@@ -35,7 +35,7 @@ function Header(props) {
           Главная
         </NavLink>
         <NavLink to="/services" className="header__nav-link" activeClassName="header__nav-link_active">
-          Услуги
+          Практики
         </NavLink>
         <NavLink to="/provodniki" className="header__nav-link" activeClassName="header__nav-link_active">
           проводники

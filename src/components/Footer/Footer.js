@@ -45,7 +45,7 @@ function Footer(props) {
         <nav className="footer__nav">
           <ul className="footer__nav-links">
             <li className="footer__nav-li"><Link className="footer__nav-link" to="/">Главная</Link></li>
-            <li className="footer__nav-li"><Link className="footer__nav-link" to="/services">Услуги</Link></li>
+            <li className="footer__nav-li"><Link className="footer__nav-link" to="/services">Практики</Link></li>
             <li className="footer__nav-li"><Link className="footer__nav-link" to="/provodniki">Проводники</Link></li>
           </ul>
           <ul className="footer__nav-links">

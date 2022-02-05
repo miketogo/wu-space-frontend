@@ -446,6 +446,9 @@ video {
 }
 
 @media (max-width: 488px) {
+  .team-member__no-practic-cards{
+    font-size: 16px;
+  }
   .team-member__title {
     font-style: normal;
     font-weight: normal;
