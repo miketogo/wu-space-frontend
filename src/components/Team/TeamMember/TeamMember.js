@@ -98,7 +98,7 @@ function TeamMember(props) {
 
       });
 
-      setTimeTable(formatedTimeTable.slice(0, 9))
+      setTimeTable(formatedTimeTable)
 
       setTimeout(() => {
         setPreloaderVisible(false)

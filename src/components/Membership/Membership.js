@@ -97,7 +97,7 @@ function Membership(props) {
             </div>
             <p className="membership__card-visit-times">Количесво посещений: {card.visit_times}</p>
             <p className="membership__card-validity-period">Срок действия: {card.validity_period}</p>
-            <p className="membership__card-distributed">Распространяется для праткик:</p>
+            <p className="membership__card-distributed">Распространяется для практик:</p>
             <p className="membership__card-practics">{card.practics}</p>
             <p className="membership__card-bonus">{card.bonus}</p>
             <span className="membership__card-btn-plug"></span>
@@ -125,7 +125,7 @@ function Membership(props) {
               <p className="membership__card-validity-period">&ensp;</p>
             }
 
-            <p className="membership__card-distributed">Распространяется для праткик:</p>
+            <p className="membership__card-distributed">Распространяется для практик:</p>
             <p className="membership__card-practics">{card.practics}{moreIdOpened === `second-row-card-member-id${i}` && card.more_practics ? ` ${card.more_practics}` : ''}</p>
             {moreIdOpened === `second-row-card-member-id${i}` ?
               <>

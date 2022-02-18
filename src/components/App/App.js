@@ -15,11 +15,11 @@ import TeamMember from '../Team/TeamMember/TeamMember';
 import anastasiya_tarasenko_img from '../../assets/images/team/anastasiya-tarasenko.png'
 import tatiyana_treshchalova_img from '../../assets/images/team/tatiyana-treshchalova.png'
 import aleksandr_demidov_img from '../../assets/images/team/aleksandr-demidov.png'
-import ulyana_sotnikova_img from '../../assets/images/team/ulyana-sotnikova.png'
+import ulyana_sotnikova_img from '../../assets/images/team/ulyana-sotnikova.jpg'
 import aleksandr_kirichenko_img from '../../assets/images/team/aleksandr-kirichenko.png'
 import alexander_ryshkov_img from '../../assets/images/team/alexander-ryshkov.png'
 import ekaterina_petina_img from '../../assets/images/team/ekaterina-petina.png'
-import timur_abdrakhmanov_img from '../../assets/images/team/timur-abdrakhmanov.png'
+import timur_abdrakhmanov_img from '../../assets/images/team/timur-abdrakhmanov.jpg'
 import plug from '../../assets/images/team/plug.png'
 
 
@@ -57,7 +57,7 @@ const team = [
     link: 'tatiyana-treshchalova',
     photo: tatiyana_treshchalova_img,
     video: tatiyana_treshchalova_video,
-    practics: 'Индивидуальная гонг-сессия, Шампанское путешествие, Ракета желаний, Гонг+Pane, Кундалини-Йога + Гонг + Йога-Нидра',
+    practics: 'Индивидуальная гонг-сессия, Шаманское путешествие, Ракета желаний, Гонг+Pane, Кундалини-Йога + Гонг + Йога-Нидра',
     short_desc: 'Татьяна Трещалова – Мастер кундалини-йоги школы Йоги Бхаджана и ученица Карта Сингха в Kundalini Research Institute...',
     desc: 'Татьяна Трещалова – Мастер кундалини-йоги школы Йоги Бхаджана и ученица Карта Сингха в Kundalini Research Institute. В 2013 году Татьяна прошла курс обучения йоги для детей по программе Childplay yoga у Гурудас Каур, который позволяет ей глубоко чувствовать психологию и состояние детей, находить с ними наиважнейшие точки соприкосновения. Мастер закончила обучение в школе холистического звука Дона Конро и у лучших мастеров гонга, Тома Солтрона в Польше, Алиции и Ричардаса Эйлякас в Литве. За время многолетней практики и обучения Татьяна в совершенстве овладела техникой игры на гонге.'
   },

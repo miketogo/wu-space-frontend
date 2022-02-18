@@ -43,6 +43,10 @@
 
 .team__card-img {
     margin: 0 28px 0 0;
+    width: 324px;
+    height: 486px;
+object-fit: cover;
+
 }
 
 .team__card-texts {
@@ -194,7 +198,7 @@
         width: 100%;
         height: 498px;
         object-fit: cover;
-        object-position: 0 -100px;
+        object-position: center;
     }
 
     .team__cards {
@@ -254,7 +258,7 @@
     .team__card-img {
         height: 260px;
         object-fit: cover;
-        object-position: 0 -50px;
+        object-position:center;
     }
 
     .team__cards {

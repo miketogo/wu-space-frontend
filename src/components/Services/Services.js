@@ -135,7 +135,7 @@ function Services(props) {
       setTypes(types)
       console.log(trainers)
       setTrainers(trainers)
-      setTimeTable(formatedTimeTable.slice(0, 9))
+      setTimeTable(formatedTimeTable)
     }
 
   }, [props.timeTable]);
