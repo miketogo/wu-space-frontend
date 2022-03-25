@@ -95,7 +95,7 @@ function Membership(props) {
             <div className={`membership__card-ticket ${card.ticket_class}`}>
               <img className="membership__card-ticket-logo" src={logo} alt='Wu' />
             </div>
-            <p className="membership__card-visit-times">Количесво посещений: {card.visit_times}</p>
+            <p className="membership__card-visit-times">Количество посещений: {card.visit_times}</p>
             <p className="membership__card-validity-period">Срок действия: {card.validity_period}</p>
             <p className="membership__card-distributed">Распространяется для практик:</p>
             <p className="membership__card-practics">{card.practics}</p>
@@ -118,7 +118,7 @@ function Membership(props) {
             <div className={`membership__card-ticket ${card.ticket_class}`}>
               <img className="membership__card-ticket-logo" src={logo} alt='Wu' />
             </div>
-            <p className="membership__card-visit-times">Количесво посещений: {card.visit_times}</p>
+            <p className="membership__card-visit-times">Количество посещений: {card.visit_times}</p>
             {card.type !== 4 ?
               <p className="membership__card-validity-period">Срок действия: {card.validity_period}</p>
               :
@@ -141,12 +141,12 @@ function Membership(props) {
                 <p className="membership__card-more" onClick={() => { setMoreIdOpened(`second-row-card-member-id${i}`) }}>Подробнее</p> :
                 card.type === 4 ? <></> : <p className="membership__card-bonus">{card.bonus}</p>
             }
-            {card.type === 4 ?
+            {/* {card.type === 4 ?
               <Link className="membership__card-link" to='/'>
                 <p className="membership__card-link-text">Узнать про базовые практики </p>
               </Link>
               :
-              <></>}
+              <></>} */}
             <span className="membership__card-btn-plug"></span>
             <a href={card.link} className="membership__card-btn">
               <p className="membership__card-btn-text">Приобрести</p>

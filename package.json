@@ -23,7 +23,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build &&  scp -r ./build/*  miketogo66@62.84.123.91:/home/miketogo66/wu-space-frontend"
+    "deploy": "npm run build &&  scp -r ./build/*  caba@84.201.164.64:/home/caba/wu-space-frontend"
   },
   "eslintConfig": {
     "extends": [

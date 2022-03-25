@@ -62,7 +62,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: 'http://wu-space.ru/api'
+  baseUrl: 'https://wu-space.ru/api'
   // baseUrl: 'http://localhost:3003'
 });
 export default mainApi
